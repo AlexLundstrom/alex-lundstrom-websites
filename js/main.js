@@ -48,7 +48,7 @@ function getStoredLanguage() {
     console.warn('Language storage unavailable:', error);
   }
 
-  return 'en';
+  return 'fi';
 }
 
 function persistLanguage(lang) {
