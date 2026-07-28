@@ -125,20 +125,38 @@ function initMobileNav() {
   });
 }
 
-// Placeholder for contact form
+// Contact form implementation
 function initContactForm() {
   const form = document.getElementById('contactForm');
   const successBox = document.getElementById('formSuccess');
 
   if (!form || !successBox) return;
 
-  form.addEventListener('submit', (e) => {
+  form.addEventListener("submit", async (e) => {
     e.preventDefault();
-    
-    // Smooth transition between form visual state
-    form.classList.add('hidden');
-    successBox.classList.remove('hidden');
-  });
+
+    const data = {
+        name: form.name.value,
+        email: form.email.value,
+        phone: form.phone.value,
+        message: form.message.value
+    };
+
+    const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+    });
+
+    if (response.ok) {
+        form.classList.add("hidden");
+        successBox.classList.remove("hidden");
+    } else {
+        alert("Something went wrong.");
+    }
+});
 }
 
 // Set footer year info
