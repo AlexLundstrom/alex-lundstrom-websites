@@ -1,0 +1,24 @@
+{
+  "name": "alexlundstrom",
+  "version": "1.0.0",
+  "description": "Modern website building service for businesses.",
+  "main": "eslint.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexLundstrom/alex-lundstrom-websites.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/AlexLundstrom/alex-lundstrom-websites/issues"
+  },
+  "homepage": "https://github.com/AlexLundstrom/alex-lundstrom-websites#readme",
+  "dependencies": {
+    "resend": "^6.18.1"
+  }
+}
