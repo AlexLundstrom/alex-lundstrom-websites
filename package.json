@@ -4,7 +4,9 @@
   "description": "Modern website building service for businesses.",
   "main": "eslint.config.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev"
   },
   "repository": {
     "type": "git",

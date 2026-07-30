@@ -127,36 +127,49 @@ function initMobileNav() {
 
 // Contact form implementation
 function initContactForm() {
-  const form = document.getElementById('contactForm');
-  const successBox = document.getElementById('formSuccess');
+  const form = document.getElementById("contactForm");
+  const successBox = document.getElementById("formSuccess");
 
-  if (!form || !successBox) return;
+  if (!form) return;
 
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
+    const formData = new FormData(form);
+
     const data = {
-        name: form.name.value,
-        email: form.email.value,
-        phone: form.phone.value,
-        message: form.message.value
+      name: formData.get("name"),
+      email: formData.get("email"),
+      business: formData.get("business"),
+      message: formData.get("message"),
     };
 
-    const response = await fetch("/api/contact", {
+    try {
+      const response = await fetch("/api/contact", {
         method: "POST",
         headers: {
-            "Content-Type": "application/json"
+          "Content-Type": "application/json",
         },
-        body: JSON.stringify(data)
-    });
+        body: JSON.stringify(data),
+      });
 
-    if (response.ok) {
-        form.classList.add("hidden");
+      if (!response.ok) {
+        throw new Error();
+      }
+
+      form.classList.add("hidden");
+
+      if (successBox) {
         successBox.classList.remove("hidden");
-    } else {
-        alert("Something went wrong.");
+      }
+
+      form.reset();
+
+    } catch (err) {
+      alert("Failed to send message.");
+      console.error(err);
     }
-});
+  });
 }
 
 // Set footer year info
