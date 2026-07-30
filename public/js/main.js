@@ -133,43 +133,31 @@ function initContactForm() {
   if (!form) return;
 
   form.addEventListener("submit", async (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    const formData = new FormData(form);
+  try {
+    const response = await fetch("/contact", {
+      method: "POST",
+      body: new FormData(form)
+    });
 
-    const data = {
-      name: formData.get("name"),
-      email: formData.get("email"),
-      business: formData.get("business"),
-      message: formData.get("message"),
-    };
-
-    try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
-
-      if (!response.ok) {
-        throw new Error();
-      }
-
-      form.classList.add("hidden");
-
-      if (successBox) {
-        successBox.classList.remove("hidden");
-      }
-
-      form.reset();
-
-    } catch (err) {
-      alert("Failed to send message.");
-      console.error(err);
+    if (!response.ok) {
+      throw new Error(await response.text());
     }
-  });
+
+    form.classList.add("hidden");
+
+    if (successBox) {
+      successBox.classList.remove("hidden");
+    }
+
+    form.reset();
+
+  } catch (err) {
+    console.error(err);
+    alert("Failed to send message.");
+  }
+});
 }
 
 // Set footer year info
