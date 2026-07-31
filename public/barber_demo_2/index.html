@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barber | Modern Barber Shop</title>
+    <meta name="description" content="Premium barbering services in Helsinki. Premium haircuts, traditional hot towel shaves, and precision beard grooming in a modern industrial setting.">
+    <meta name="keywords" content="barber helsinki, parturi helsinki, parturi, hiustenleikkuu, partidamuotoilu, beard trim,  barber">
+    <meta name="author" content=" Barber">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://barber.fi/">
+    <meta property="og:title" content=" Barber | Premium Barber Shop">
+    <meta property="og:description" content="Precision barbering, modern craft, and traditional hot towel shaves in a modern industrial setting.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1200&q=80">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://barber.fi/">
+    <meta property="twitter:title" content=" Barber | Premium Barber Shop Helsinki">
+    <meta property="twitter:description" content="Precision barbering, modern craft, and traditional hot towel shaves in central Helsinki.">
+    <meta property="twitter:image" content="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1200&q=80">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✂️</text></svg>">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header" id="header">
+
+        
+        
+        <div class="container header-container">
+            <a href="https://alexlundstrom.fi/#portfolio"
+   class="portfolio-back"
+   data-fi="← Takaisin Portfolioon"
+   data-en="← Back to Portfolio">
+    ← Takaisin Portfolioon
+    </a>
+            <a href="#hero" class="logo" aria-label=" Barber Home">
+                <span class="logo-main"></span>
+                <span class="logo-sub">BARBER</span>
+            </a>
+
+            <nav class="nav-menu" id="nav-menu" aria-label="Main Navigation">
+                <ul class="nav-list">
+                    <li><a href="#about" class="nav-link" data-fi="MEISTÄ" data-en="ABOUT">MEISTÄ</a></li>
+                    <li><a href="#services" class="nav-link" data-fi="PALVELUT" data-en="SERVICES">PALVELUT</a></li>
+                    <li><a href="#barbers" class="nav-link" data-fi="PARTURIT" data-en="BARBERS">PARTURIT</a></li>
+                    <li><a href="#gallery" class="nav-link" data-fi="GALLERIA" data-en="GALLERY">GALLERIA</a></li>
+                    <li><a href="#contact" class="nav-link" data-fi="YHTEYSTIEDOT" data-en="CONTACT">YHTEYSTIEDOT</a></li>
+                </ul>
+                <div class="nav-cta-mobile">
+                    <a href="#contact" class="btn btn-primary" data-fi="VARAA AIKA" data-en="BOOK NOW">VARAA AIKA</a>
+                </div>
+            </nav>
+
+            <div class="header-actions">
+                <div class="lang-switch" aria-label="Language Selector">
+                    <button type="button" class="lang-btn active" data-lang="fi" aria-label="Vaihda suomeksi">FI</button>
+                    <span class="lang-divider">/</span>
+                    <button type="button" class="lang-btn" data-lang="en" aria-label="Switch to English">EN</button>
+                </div>
+
+                <a href="#contact" class="btn btn-outline btn-header-cta" data-fi="VARAA AIKA" data-en="BOOK NOW">VARAA AIKA</a>
+
+                <button class="nav-toggle" id="nav-toggle" aria-label="Avaa valikko" aria-expanded="false" aria-controls="nav-menu">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <div class="hero-bg-overlay"></div>
+            <div class="container hero-container">
+                <div class="hero-content reveal">
+                    <p class="hero-subtitle" data-fi="HELSINKI — ALEKSANTERINKATU 15" data-en="HELSINKI — ALEKSANTERINKATU 15">HELSINKI — ALEKSANTERINKATU 15</p>
+                    <h1 class="hero-title"> BARBER</h1>
+                    <p class="hero-tagline" data-fi="PREMIUM-PARTURIPALVELUT JA TARKKA MUOTOILU." data-en="PREMIUM BARBERING & PRECISION GROOMING.">PREMIUM-PARTURIPALVELUT JA TARKKA MUOTOILU.</p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary btn-lg" data-fi="VARAA AIKA" data-en="BOOK APPOINTMENT">VARAA AIKA</a>
+                        <a href="#services" class="btn btn-secondary btn-lg" data-fi="KATSO PALVELUT" data-en="VIEW SERVICES">KATSO PALVELUT</a>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-scroll-indicator">
+                <span data-fi="VIERITÄ ALAS" data-en="SCROLL DOWN">VIERITÄ ALAS</span>
+                <div class="scroll-line"></div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="section about-section" id="about">
+            <div class="container">
+                <div class="split-layout">
+                    <div class="split-image-wrapper reveal">
+                        <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=1000&q=80" alt=" Barber Interior" class="split-image" loading="lazy">
+                        <div class="image-accent-border"></div>
+                    </div>
+                    <div class="split-content reveal">
+                        <span class="section-tag" data-fi="MEIDÄN TARINAMME" data-en="OUR STORY">MEIDÄN TARINAMME</span>
+                        <h2 class="section-title" data-fi="AMMATTITAITOA JA TYYLIÄ" data-en="CRAFT & STYLE">AMMATTITAITOA JA TYYLIÄ</h2>
+                        <div class="divider-line"></div>
+                        <p class="text-body" data-fi=" Barber syntyi intohimosta perinteiseen parturikulttuuriin. Tarjoamme korkeatasoisia hiustenleikkauksia, partapalveluita ja parranajoja Helsingin ydinkeskustassa." data-en=" Barber was born out of a passion for traditional barbering culture combined with modern Scandinavian aesthetics. We offer high-end haircuts, beard sculpting, and traditional hot towel shaves in the heart of Helsinki.">
+                             Barber syntyi intohimosta perinteiseen parturikulttuuriin. Tarjoamme korkeatasoisia hiustenleikkauksia, partapalveluita ja parranajoja Helsingin ydinkeskustassa.
+                        </p>
+                        <p class="text-body" data-fi="Meille jokainen asiakas on yksilö. Panostamme tarkkaan työnjälkeen, laadukkaisiin tuotteisiin ja rentouttavaan ilmapiiriin, jossa voit ottaa oman hetkesi kiireen keskellä." data-en="For us, every client is unique. We focus on precision workmanship, premium products, and a refined atmosphere where you can unwind in style.">
+                            Meille jokainen asiakas on yksilö. Panostamme tarkkaan työnjälkeen, laadukkaisiin tuotteisiin ja rentouttavaan ilmapiiriin, jossa voit ottaa oman hetkesi kiireen keskellä.
+                        </p>
+                        
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <span class="stat-number">10+</span>
+                                <span class="stat-label" data-fi="VUODEN KOKEMUS" data-en="YEARS EXP.">VUODEN KOKEMUS</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">15K+</span>
+                                <span class="stat-label" data-fi="TYYTYVÄISTÄ ASIAKASTA" data-en="SATISFIED CLIENTS">TYYTYVÄISTÄ ASIAKASTA</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="section services-section dark-bg" id="services">
+            <div class="container">
+                <div class="section-header text-center reveal">
+                    <span class="section-tag" data-fi="HINNASTO & PALVELUT" data-en="SERVICES & PRICING">HINNASTO & PALVELUT</span>
+                    <h2 class="section-title" data-fi="VALITSE OMALLE TYYLILLESI SOPIVA PALVELU" data-en="CHOOSE THE RIGHT TREATMENT FOR YOUR STYLE">VALITSE OMALLE TYYLILLESI SOPIVA PALVELU</h2>
+                    <div class="divider-line center"></div>
+                </div>
+
+                <div class="services-grid">
+                    <!-- Service 1 -->
+                    <div class="service-card reveal">
+                        <div class="service-header">
+                            <h3 class="service-name" data-fi="HIUSTENLEIKKUU" data-en="CLASSIC HAIRCUT">HIUSTENLEIKKUU</h3>
+                            <span class="service-price">42 €</span>
+                        </div>
+                        <p class="service-desc" data-fi="Klassinen tai moderni hiustenleikkuu sisältäen konsultoinnin, pesun, muotoilun ja niska-alueen siistimisen veitsellä." data-en="Classic or modern haircut including consultation, wash, styling, and neck shave with a straight razor.">Klassinen tai moderni hiustenleikkuu sisältäen konsultoinnin, pesun, muotoilun ja niska-alueen siistimisen veitsellä.</p>
+                        <div class="service-meta">
+                            <span class="service-duration">⏱ 45 MIN</span>
+                        </div>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="service-card reveal">
+                        <div class="service-header">
+                            <h3 class="service-name" data-fi="PARTAPAKETTI / BEARD TRIM" data-en="BEARD SCULPTING">PARTAPAKETTI / BEARD TRIM</h3>
+                            <span class="service-price">32 €</span>
+                        </div>
+                        <p class="service-desc" data-fi="Parran muotoilu koneella ja saksilla, linjojen siistiminen veitsellä sekä hoitoöljy." data-en="Beard shaping with clippers and scissors, finished with hot towel and beard oil.">Parran muotoilu koneella ja saksilla, linjojen siistiminen veitsellä sekä hoitoöljy.</p>
+                        <div class="service-meta">
+                            <span class="service-duration">⏱ 30 MIN</span>
+                        </div>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="service-card featured reveal">
+                        <div class="featured-badge" data-fi="SUOSITUIN" data-en="MOST POPULAR">SUOSITUIN</div>
+                        <div class="service-header">
+                            <h3 class="service-name" data-fi="SPECIAL (HIUKSET + PARTA)" data-en="SPECIAL (HAIR + BEARD)">SPECIAL (HIUKSET + PARTA)</h3>
+                            <span class="service-price">68 €</span>
+                        </div>
+                        <p class="service-desc" data-fi="Täydellinen paketti: Hiustenleikkuu, ja parran muotoilu." data-en="Complete grooming experience: Haircut, precision beard trim, and styling.">Täydellinen paketti: Hiustenleikkuu, ja parran muotoilu.</p>
+                        <div class="service-meta">
+                            <span class="service-duration">⏱ 75 MIN</span>
+                        </div>
+                    </div>
+
+                    <!-- Service 4 -->
+                    <div class="service-card reveal">
+                        <div class="service-header">
+                            <h3 class="service-name" data-fi="SKIN FADE / VEITSIHÄIVYTYS" data-en="SKIN FADE">SKIN FADE / VEITSIHÄIVYTYS</h3>
+                            <span class="service-price">48 €</span>
+                        </div>
+                        <p class="service-desc" data-fi="Erityistä tarkkuutta vaativa veitsi- tai shaver-häivytys. Sisältää pesun ja tarkat linjat." data-en="Precision fade down to skin with foil shaver or razor. Includes scalp wash and razor line-up.">Erityistä tarkkuutta vaativa veitsi- tai shaver-häivytys. Sisältää pesun ja tarkat linjat.</p>
+                        <div class="service-meta">
+                            <span class="service-duration">⏱ 50 MIN</span>
+                        </div>
+                    </div>
+
+                    <!-- Service 5 -->
+                    <div class="service-card reveal">
+                        <div class="service-header">
+                            <h3 class="service-name" data-fi="HOT TOWEL SHAVE" data-en="HOT TOWEL SHAVE">HOT TOWEL SHAVE</h3>
+                            <span class="service-price">45 €</span>
+                        </div>
+                        <p class="service-desc" data-fi="Perinteinen parranajo perinteisellä partaveitsellä, lämpimillä pyyhkeillä ja ensiluokkaisilla parranajotuotteilla." data-en="Traditional full face shave with straight razor, pre-shave oils, warm towels, and soothing balm finish.">Perinteinen parranajo perinteisellä partaveitsellä, lämpimillä pyyhkeillä ja ensiluokkaisilla parranajotuotteilla.</p>
+                        <div class="service-meta">
+                            <span class="service-duration">⏱ 45 MIN</span>
+                        </div>
+                    </div>
+
+                    <!-- Service 6 -->
+                    <div class="service-card reveal">
+                        <div class="service-header">
+                            <h3 class="service-name" data-fi="LASTEN HIUSTENLEIKKUU (-12v)" data-en="JUNIOR CUT (UNDER 12)">LASTEN HIUSTENLEIKKUU (-12v)</h3>
+                            <span class="service-price">32 €</span>
+                        </div>
+                        <p class="service-desc" data-fi="Tyylikäs hiustenleikkuu perheen pienemmille sujuvasti ja ammattitaidolla." data-en="Stylish haircut for younger performed with patience and skill.">Tyylikäs hiustenleikkuu perheen pienemmille sujuvasti ja ammattitaidolla.</p>
+                        <div class="service-meta">
+                            <span class="service-duration">⏱ 30 MIN</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Barbers Section -->
+        <section class="section barbers-section" id="barbers">
+            <div class="container">
+                <div class="section-header text-center reveal">
+                    <span class="section-tag" data-fi="AMMATTILAISET" data-en="THE TEAM">AMMATTILAISET</span>
+                    <h2 class="section-title" data-fi="MEIDÄN PARTURIMME" data-en="MEET OUR BARBERS">MEIDÄN PARTURIMME</h2>
+                    <div class="divider-line center"></div>
+                </div>
+
+                <div class="barbers-grid">
+                    <!-- Barber 1 -->
+                    <div class="barber-card reveal">
+                        <div class="barber-image-wrapper">
+                            <img src="" alt="Matti meikäläisen kuva" class="barber-img" loading="lazy">
+                        </div>
+                        <div class="barber-info">
+                            <h3 class="barber-name">MATTI MEIKÄLÄINEN</h3>
+                            <span class="barber-title" data-fi="PERUSTAJA" data-en="FOUNDER">PERUSTAJA</span>
+                            <p class="barber-bio" data-fi="Yli 12 vuoden kokemus alalta. Erikoistunut klassisiin leikkauksiin ja perinteiseen partaveitsiajon taitoon." data-en="Over 12 years of craftsmanship. Specializes in classic tailoring cuts and traditional razor shaves.">Yli 12 vuoden kokemus alalta. Erikoistunut klassisiin leikkauksiin ja perinteiseen partaveitsiajon taitoon.</p>
+                        </div>
+                    </div>
+
+                    <!-- Barber 2 -->
+                    <div class="barber-card reveal">
+                        <div class="barber-image-wrapper">
+                            <img src="" alt="Matti meikäläisen kuva" class="barber-img" loading="lazy">
+                        </div>
+                        <div class="barber-info">
+                            <h3 class="barber-name">MATTI MEIKÄLÄINEN</h3>
+                            <span class="barber-title" data-fi="PERUSTAJA" data-en="FOUNDER">PERUSTAJA</span>
+                            <p class="barber-bio" data-fi="Yli 12 vuoden kokemus alalta. Erikoistunut klassisiin leikkauksiin ja perinteiseen partaveitsiajon taitoon." data-en="Over 12 years of craftsmanship. Specializes in classic tailoring cuts and traditional razor shaves.">Yli 12 vuoden kokemus alalta. Erikoistunut klassisiin leikkauksiin ja perinteiseen partaveitsiajon taitoon.</p>
+                        </div>
+                    </div>
+
+                    <!-- Barber 3 -->
+                    <div class="barber-card reveal">
+                        <div class="barber-image-wrapper">
+                            <img src="" alt="Matti meikäläisen kuva" class="barber-img" loading="lazy">
+                        </div>
+                        <div class="barber-info">
+                            <h3 class="barber-name">MATTI MEIKÄLÄINEN</h3>
+                            <span class="barber-title" data-fi="PERUSTAJA" data-en="FOUNDER">PERUSTAJA</span>
+                            <p class="barber-bio" data-fi="Yli 12 vuoden kokemus alalta. Erikoistunut klassisiin leikkauksiin ja perinteiseen partaveitsiajon taitoon." data-en="Over 12 years of craftsmanship. Specializes in classic tailoring cuts and traditional razor shaves.">Yli 12 vuoden kokemus alalta. Erikoistunut klassisiin leikkauksiin ja perinteiseen partaveitsiajon taitoon.</p>
+                        </div>
+                    </div> 
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section class="section gallery-section dark-bg" id="gallery">
+            <div class="container">
+                <div class="section-header text-center reveal">
+                    <span class="section-tag" data-fi="TYÖN JÄLKI & ILMAPIIRI" data-en="PORTFOLIO & ATMOSPHERE">ILMAPIIRI</span>
+                    <h2 class="section-title" data-fi="GALLERIA" data-en="GALLERY">GALLERIA</h2>
+                    <div class="divider-line center"></div>
+                </div>
+
+                <div class="gallery-grid">
+                    <div class="gallery-item reveal">
+                        <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?auto=format&fit=crop&w=800&q=80" alt="Barber styling hair" loading="lazy">
+                        <div class="gallery-overlay">
+                            <span data-fi="TARKKA VIIMEISTELY" data-en="PRECISION STYLING">TARKKA VIIMEISTELY</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item reveal">
+                        <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=800&q=80" alt="Barber tools" loading="lazy">
+                        <div class="gallery-overlay">
+                            <span data-fi="PREMIUM-VÄLINEET" data-en="PREMIUM TOOLS">PREMIUM-VÄLINEET</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item reveal">
+                        <img src="https://images.unsplash.com/photo-1517832606589-715746231966?auto=format&fit=crop&w=800&q=80" alt="Modern Barber Shop Interior" loading="lazy">
+                        <div class="gallery-overlay">
+                            <span data-fi="URBAANI MILJÖÖ" data-en="URBAN INTERIOR">URBAANI MILJÖÖ</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item reveal">
+                        <img src="https://images.unsplash.com/photo-1593702295094-aea22597a6b9?auto=format&fit=crop&w=800&q=80" alt="Beard trimming ritual" loading="lazy">
+                        <div class="gallery-overlay">
+                            <span data-fi="PARTAPALVELUT" data-en=""></span>
+                        </div>
+                    </div>
+                    <div class="gallery-item reveal">
+                        <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=800&q=80" alt="Hot towel shave treatment" loading="lazy">
+                        <div class="gallery-overlay">
+                            <span data-fi="" data-en=""></span>
+                        </div>
+                    </div>
+                    <div class="gallery-item reveal">
+                        <img src="https://images.unsplash.com/photo-1512690459411-b9245aed614b?auto=format&fit=crop&w=800&q=80" alt="Lounge area" loading="lazy">
+                        <div class="gallery-overlay">
+                            <span data-fi="ODOTUSTILA & BAR" data-en="LOUNGE & REFRESHMENTS">ODOTUSTILA & BAR</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="section testimonials-section" id="testimonials">
+            <div class="container">
+                <div class="section-header text-center reveal">
+                    <span class="section-tag" data-fi="PALAUTTEET" data-en="REVIEWS">PALAUTTEET</span>
+                    <h2 class="section-title" data-fi="MITÄ ASIAKKAAMME SANOVAT" data-en="WHAT OUR CLIENTS SAY">MITÄ ASIAKKAAMME SANOVAT</h2>
+                    <div class="divider-line center"></div>
+                </div>
+
+                <div class="testimonials-grid">
+                    <div class="testimonial-card reveal">
+                        <div class="stars" aria-label="5 stars">★★★★★</div>
+                        <p class="testimonial-text" data-fi="&ldquo;Helsingin paras parturi. Tulos on aina 10/10 ja palvelu erittäin ammattitaitoista. Erik tietää täsmälleen mitä tekee.&rdquo;" data-en="&ldquo;Best barber shop in Helsinki. Results are always 10/10 and the service is extremely professional. Erik knows exactly what he is doing.&rdquo;">
+                            &ldquo;Helsingin paras parturi. Tulos on aina 10/10 ja palvelu erittäin ammattitaitoista. Matti tietää täsmälleen mitä tekee.&rdquo;
+                        </p>
+                        <div class="testimonial-author">
+                            <span class="author-name">Markus V.</span>
+                            <span class="author-role" data-fi="Vakioasiakas 3v" data-en="Regular Client 3 yrs">Vakioasiakas 3v</span>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card reveal">
+                        <div class="stars" aria-label="5 stars">★★★★★</div>
+                        <p class="testimonial-text" data-fi="&ldquo;Erinomainen ilmapiiri ja mahtava Skin Fade. Paikka on tyylikäs ja siellä on helppo rentoutua raskaankin työpäivän jälkeen.&rdquo;" data-en="&ldquo;Outstanding atmosphere and a top-tier skin fade. The place is stylish and it's easy to unwind after a long day of work.&rdquo;">
+                            &ldquo;Erinomainen ilmapiiri. Paikka on tyylikäs ja siellä on helppo rentoutua raskaankin työpäivän jälkeen.&rdquo;
+                        </p>
+                        <div class="testimonial-author">
+                            <span class="author-name">Jonne K.</span>
+                            <span class="author-role" data-fi="Vakioasiakas" data-en="Regular Client">Vakioasiakas</span>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card reveal">
+                        <div class="stars" aria-label="5 stars">★★★★★</div>
+                        <p class="testimonial-text" data-fi="&ldquo;Ensimmäinen Hot Towel Shave kokemus ja todellakin vastasi kaikkia odotuksia. Suosittelen lämpimästi jokaiselle .&rdquo;" data-en="&ldquo;First time experiencing a Hot Towel Shave and it exceeded every expectation. Highly recommended for every gentleman.&rdquo;">
+                            &ldquo;Ensimmäinen kerta parturissa ja todellakin vastasi kaikkia odotuksia. Suosittelen lämpimästi jokaiselle.&rdquo;
+                        </p>
+                        <div class="testimonial-author">
+                            <span class="author-name">Daniel H.</span>
+                            <span class="author-role" data-fi="Uusi asiakas" data-en="New Client">Uusi asiakas</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA & Booking Section -->
+        <section class="section booking-section dark-bg" id="contact">
+            <div class="container">
+                <div class="booking-wrapper">
+                    <div class="booking-content reveal">
+                        <span class="section-tag" data-fi="VARAUS & YHTEYS" data-en="RESERVATIONS">VARAUS & YHTEYS</span>
+                        <h2 class="section-title" data-fi="VARMISTA OMA AIKASI TÄNÄÄN" data-en="SECURE YOUR SLOT TODAY">VARMISTA OMA AIKASI TÄNÄÄN</h2>
+                        <div class="divider-line"></div>
+                        <p class="text-body" data-fi="Varaa aikasi helposti lomakkeella tai soita meille suoraan. Tervetuloa kokemaan premium-tason parturipalvelu Helsingin sydämessä." data-en="Book your appointment using the form or give us a call directly. Welcome to experience high-end barbering in central Helsinki.">
+                            Varaa aikasi helposti lomakkeella tai soita meille suoraan. Tervetuloa kokemaan premium-tason parturipalvelu Helsingin sydämessä.
+                        </p>
+
+                        <div class="direct-contact-info">
+                            <div class="contact-info-item">
+                                <span class="info-label" data-fi="PUHELIN" data-en="PHONE">PUHELIN</span>
+                                <a href="tel:+358401234567" class="info-value">+358 40 123 4567</a>
+                            </div>
+                            <div class="contact-info-item">
+                                <span class="info-label" data-fi="SÄHKÖPOSTI" data-en="EMAIL">SÄHKÖPOSTI</span>
+                                <a href="mailto:info@barber.fi" class="info-value">info@barber.fi</a>
+                            </div>
+                            <div class="contact-info-item">
+                                <span class="info-label" data-fi="OSOITE" data-en="ADDRESS">OSOITE</span>
+                                <span class="info-value">Aleksanterinkatu 15, 00100 Helsinki</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="booking-form-wrapper reveal">
+                        <form class="contact-form" id="contact-form" novalidate>
+                            <h3 class="form-title" data-fi="JÄTÄ VARAUSPYYNTÖ" data-en="BOOK AN APPOINTMENT">JÄTÄ VARAUSPYYNTÖ</h3>
+                            
+                            <div class="form-group">
+                                <label for="name" class="form-label" data-fi="NIMI *" data-en="FULL NAME *">NIMI *</label>
+                                <input type="text" id="name" name="name" class="form-input" required data-fi-placeholder="Nimesi" data-en-placeholder="Your Name" placeholder="Nimesi">
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email" class="form-label" data-fi="SÄHKÖPOSTI *" data-en="EMAIL *">SÄHKÖPOSTI *</label>
+                                    <input type="email" id="email" name="email" class="form-input" required data-fi-placeholder="sahkoposti@osoite.fi" data-en-placeholder="your@email.com" placeholder="sahkoposti@osoite.fi">
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone" class="form-label" data-fi="PUHELIN *" data-en="PHONE *">PUHELIN *</label>
+                                    <input type="tel" id="phone" name="phone" class="form-input" required data-fi-placeholder="040 123 4567" data-en-placeholder="+358 40 123 4567" placeholder="040 123 4567">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="service" class="form-label" data-fi="VALITSE PALVELU" data-en="SELECT SERVICE">VALITSE PALVELU</label>
+                                    <select id="service" name="service" class="form-input">
+                                        <option value="haircut" data-fi="Hiustenleikkuu (42 €)" data-en="Classic Haircut (€42)">Hiustenleikkuu (42 €)</option>
+                                        <option value="beard" data-fi="Partapaketti (32 €)" data-en="Beard Sculpting (€32)">Partapaketti (32 €)</option>
+                                        <option value="special" data-fi=" Special (68 €)" data-en="The  Special (€68)"> Special (68 €)</option>
+                                        <option value="fade" data-fi="Skin Fade (48 €)" data-en="Skin Fade (€48)">Skin Fade (48 €)</option>
+                                        <option value="shave" data-fi="Hot Towel Shave (45 €)" data-en="Hot Towel Shave (€45)">Hot Towel Shave (45 €)</option>
+                                        <option value="junior" data-fi="Lasten Hiustenleikkuu (32 €)" data-en="Junior Cut (€32)">Lasten Hiustenleikkuu (32 €)</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="barber" class="form-label" data-fi="TOIVOTTU PARTURI" data-en="PREFERRED BARBER">TOIVOTTU PARTURI</label>
+                                    <select id="barber" name="barber" class="form-input">
+                                        <option value="any" data-fi="Kuka tahansa" data-en="Any Barber">Kuka tahansa</option>
+                                        <option value="erik">Erik Lindqvist</option>
+                                        <option value="mikael">Mikael Koste</option>
+                                        <option value="aleksanteri">Aleksanteri Rantala</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="notes" class="form-label" data-fi="LISÄTIEDOT & AIKATOIVEET" data-en="ADDITIONAL NOTES & TIME PREFERENCES">LISÄTIEDOT & AIKATOIVEET</label>
+                                <textarea id="notes" name="notes" rows="3" class="form-input" data-fi-placeholder="Kirjoita toivomasi ajankohta tai lisätietoja..." data-en-placeholder="Preferred date/time or specific requests..." placeholder="Kirjoita toivomasi ajankohta tai lisätietoja..."></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-block" data-fi="LÄHETÄ VARAUSPYYNTÖ" data-en="SUBMIT REQUEST">LÄHETÄ VARAUSPYYNTÖ</button>
+
+                            <div class="form-feedback" id="form-feedback" role="alert" aria-live="polite"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Google Maps Embed Section -->
+        <section class="map-section">
+            <div class="map-container">
+                <iframe 
+                    title=" Barber Location Map"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1984.8524317112028!2d24.945833!3d60.168889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46920bcc26c07383%3A0x6b490407f6e32626!2sAleksanterinkatu%2015%2C%2000100%20Helsinki!5e0!3m2!1sfi!2sfi!4v1700000000000!5m2!1sfi!2sfi" 
+                    width="100%" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col brand-col">
+                    <a href="#hero" class="logo">
+                        <span class="logo-main"></span>
+                        <span class="logo-sub">BARBER</span>
+                    </a>
+                    <p class="footer-tagline" data-fi="Premium-parturipalvelut Helsingin sydämessä." data-en="High-end barbering for you in the heart of Helsinki.">
+                        Premium-parturipalvelut Helsingin sydämessä.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram" class="social-icon">IG</a>
+                        <a href="#" aria-label="Facebook" class="social-icon">FB</a>
+                        <a href="#" aria-label="TikTok" class="social-icon">TK</a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-heading" data-fi="AUKIOLOAJAT" data-en="OPENING HOURS">AUKIOLOAJAT</h4>
+                    <ul class="hours-list">
+                        <li><span data-fi="MA - PE:" data-en="MON - FRI:">MA - PE:</span> <span>10:00 - 20:00</span></li>
+                        <li><span data-fi="LAUANTAI:" data-en="SATURDAY:">LAUANTAI:</span> <span>09:00 - 18:00</span></li>
+                        <li><span data-fi="SUNNUNTAI:" data-en="SUNDAY:">SUNNUNTAI:</span> <span data-fi="SULJETTU" data-en="CLOSED">SULJETTU</span></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-heading" data-fi="YHTEYSTIEDOT" data-en="CONTACT INFO">YHTEYSTIEDOT</h4>
+                    <address class="footer-address">
+                        <p>Aleksanterinkatu 15</p>
+                        <p>00100 Helsinki, Finland</p>
+                        <p><a href="tel:+358401234567">+358 40 123 4567</a></p>
+                        <p><a href="mailto:info@barber.fi">info@barber.fi</a></p>
+                    </address>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span>  BARBER. <span data-fi="KAIKKI OIKEUDET PIDÄTETÄÄN." data-en="ALL RIGHTS RESERVED.">KAIKKI OIKEUDET PIDÄTETÄÄN.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="meta_title">Pizzeria Turku | Aito Napolilainen Pizzeria Turussa</title>
+    <meta name="description" content="Perinteinen napolilainen pizzeria Turussa. Nauti aidosta puuunitetusta pizzasta tuoreista raaka-aineista valmistettuna." data-i18n="meta_desc">
+    <meta name="keywords" content="pizzeria, Turku, napolilainen pizza, puuuni, ravintola Turku, pizza Turku">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pizzeriaturku.fi/">
+    <meta property="og:title" content="Pizzeria Turku | Aito Napolilainen Pizzeria">
+    <meta property="og:description" content="Perinteistä napolilaista pizzaa Turun sydämessä. Varaa pöytä tai katso menumme!">
+    <meta property="og:image" content="assets/images/hero-pizza.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Pizzeria Turku | Aito Napolilainen Pizzeria">
+    <meta property="twitter:description" content="Perinteistä napolilaista pizzaa Turun sydämessä. Varaa pöytä tai katso menumme!">
+    <meta property="twitter:image" content="assets/images/hero-pizza.jpg">
+
+    <!-- Favicon References -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍕</text></svg>">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <!-- Header & Navigation -->
+    <header class="header" id="site-header">
+        
+        <a href="https://alexlundstrom.fi/#portfolio"
+   class="portfolio-back"
+   data-i18n="portfolio_back">
+    ← Takaisin Portfolioon
+        </a>
+        
+        <div class="container header-container">
+            <a href="#hero" class="logo" aria-label="Pizzeria Turku Etusivu">
+                <span class="logo-icon">🍕</span>
+                <span class="logo-text">Pizzeria Turku</span>
+            </a>
+
+            <nav class="nav-menu" id="nav-menu" aria-label="Päävalikko">
+                <ul class="nav-list">
+                    <li><a href="#hero" class="nav-link active" data-i18n="nav_home">Etusivu</a></li>
+                    <li><a href="#story" class="nav-link" data-i18n="nav_story">Tarina</a></li>
+                    <li><a href="#menu" class="nav-link" data-i18n="nav_menu">Menu</a></li>
+                    <li><a href="#reviews" class="nav-link" data-i18n="nav_reviews">Arvostelut</a></li>
+                    <li><a href="#contact" class="nav-link" data-i18n="nav_contact">Yhteystiedot</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <!-- Language Toggle Button -->
+                <button class="lang-toggle" id="lang-btn" aria-label="Vaihda kieltä / Switch language">
+                    <span class="lang-option lang-fi active">FI</span>
+                    <span class="lang-divider">|</span>
+                    <span class="lang-option lang-en">EN</span>
+                </button>
+
+                <button class="btn btn-primary header-cta" id="header-reserve-btn" data-i18n="btn_reserve_header">Varaa Pöytä</button>
+
+                <!-- Hamburger Button -->
+                <button class="hamburger" id="hamburger-btn" aria-label="Avaa valikko" aria-expanded="false" aria-controls="nav-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <div class="container hero-container">
+                <div class="hero-content fade-in">
+                    <div class="rating-badge">
+                        <span class="stars">★★★★★</span>
+                        <span data-i18n="hero_rating">4.9 / 5 Google-arvosteluissa</span>
+                    </div>
+                    <h1 data-i18n="hero_title">Aitoa napolilaista pizzaa Turun sydämessä</h1>
+                    <p data-i18n="hero_subtitle">Rakkautta, perinteitä ja aitoja makuja. Hitaasti kohotettu taikina ja paistettu 485-asteisessa puu-uunissa.</p>
+                    
+                    <div class="hero-buttons">
+                        <a href="#menu" class="btn btn-primary" data-i18n="btn_view_menu">Katso Menu</a>
+                        <button class="btn btn-secondary reserve-trigger" data-i18n="btn_reserve">Varaa Pöytä</button>
+                    </div>
+
+                    <div class="hero-info-badge">
+                        <div class="badge-icon">🔥</div>
+                        <div class="badge-text">
+                            <strong data-i18n="hero_badge_title">Avoinna tänään</strong>
+                            <span data-i18n="hero_badge_hours">11:00 - 22:00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-media fade-in">
+                    <div class="hero-image-wrapper">
+                        <img src="assets/images/hero-pizza.jpg" alt="Aito Napolilainen Pizza" class="hero-img" width="600" height="600" loading="eager" onerror="this.src='https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=80'">
+                        <div class="floating-tag">
+                            <span class="tag-number">1</span>
+                            <span class="tag-label" data-i18n="hero_tag">Laadukkaat raaka-aineet</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Story Section -->
+        <section class="story section-padding" id="story">
+            <div class="container grid grid-2-col">
+                <div class="story-image-container fade-in">
+                    <img src="assets/images/story-oven.jpg" alt="Puuuuni ja pizzaleipuri" class="story-img" width="500" height="600" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&w=800&q=80'">
+                    <div class="experience-badge">
+                        <span class="exp-years">15+</span>
+                        <span class="exp-text" data-i18n="story_exp">Vuotta kokemusta</span>
+                    </div>
+                </div>
+                <div class="story-content fade-in">
+                    <span class="section-subtitle" data-i18n="story_subtitle">Meidän Tarinamme</span>
+                    <h2 class="section-title" data-i18n="story_title">Intohimona täydellinen napolilainen pizza</h2>
+                    <p class="section-text" data-i18n="story_p1">Pizzeria Turku syntyi rakkaudesta aitoon napolilaiseen ruokakulttuuriin. Haluamme tuoda Napolin kapeiden kujien tuoksut ja tunnelman suoraan Turkuun.</p>
+                    <p class="section-text" data-i18n="story_p2">Taikinamme kohotetaan vähintään 48 tuntia, mikä tekee pizzapohjasta ilmavan, pehmeän ja helposti sulavan. Käytämme vain parhaita raaka-aineita: San Marzano -tomaatteja Vesuviuksen rinteiltä, fior di latte -juustoa sekä tuoretta basilikaa.</p>
+                    <div class="story-features">
+                        <div class="feature-item">
+                            <span class="feature-icon">🌿</span>
+                            <span data-i18n="story_feat1">Aina tuoreet raaka-aineet</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">🪵</span>
+                            <span data-i18n="story_feat2">Aito puukäyttöinen uuni</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">👨‍🍳</span>
+                            <span data-i18n="story_feat3">Perinteiset reseptit</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Section -->
+        <section class="menu section-padding" id="menu">
+            <div class="container">
+                <div class="section-header text-center fade-in">
+                    <span class="section-subtitle" data-i18n="menu_subtitle">Suosituimmat Herkut</span>
+                    <h2 class="section-title" data-i18n="menu_title">Mestariteoksemme Uunista</h2>
+                    <p class="section-desc" data-i18n="menu_desc">Jokainen pizza valmistetaan käsin tilauksesta perinteisellä ammattitaidolla.</p>
+                </div>
+
+                <div class="menu-grid">
+                    <!-- Menu Item 1 -->
+                    <article class="menu-card fade-in">
+                        <div class="menu-card-image">
+                            <img src="assets/images/margherita.jpg" alt="Margherita D.O.P." width="400" height="300" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?auto=format&fit=crop&w=600&q=80'">
+                            <span class="dietary-badge" data-i18n="badge_veg">Kasvis</span>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-card-header">
+                                <h3>Margherita D.O.P.</h3>
+                                <span class="price">14,50 €</span>
+                            </div>
+                            <p class="ingredients" data-i18n="pizza_1_desc">San Marzano D.O.P. -tomaattikastike, fior di latte -mozzarella, tuore basilika, ekstra-neitsytoliiviöljy.</p>
+                        </div>
+                    </article>
+
+                    <!-- Menu Item 2 -->
+                    <article class="menu-card fade-in">
+                        <div class="menu-card-image">
+                            <img src="assets/images/diavola.jpg" alt="Diavola Pizza" width="400" height="300" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1628840042765-356cda07504e?auto=format&fit=crop&w=600&q=80'">
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-card-header">
+                                <h3>Diavola</h3>
+                                <span class="price">16,90 €</span>
+                            </div>
+                            <p class="ingredients" data-i18n="pizza_2_desc">San Marzano -tomaatti, fior di latte, tulinen spianata calabrese -salami, tuore chili, basilika.</p>
+                        </div>
+                    </article>
+
+                    <!-- Menu Item 3 -->
+                    <article class="menu-card fade-in">
+                        <div class="menu-card-image">
+                            <img src="assets/images/parma.jpg" alt="Parma & Burrata Pizza" width="400" height="300" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=600&q=80'">
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-card-header">
+                                <h3>Parma & Burrata</h3>
+                                <span class="price">18,50 €</span>
+                            </div>
+                            <p class="ingredients" data-i18n="pizza_3_desc">San Marzano -tomaatti, fior di latte, 24kk parmankinkku, tuore burrata-juusto, rucola, kirsikkatomaatti.</p>
+                        </div>
+                    </article>
+
+                    <!-- Menu Item 4 -->
+                    <article class="menu-card fade-in">
+                        <div class="menu-card-image">
+                            <img src="assets/images/quattro.jpg" alt="Quattro Formaggi Pizza" width="400" height="300" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1573821663912-569905455b1c?auto=format&fit=crop&w=600&q=80'">
+                            <span class="dietary-badge" data-i18n="badge_veg">Kasvis</span>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-card-header">
+                                <h3>Quattro Formaggi</h3>
+                                <span class="price">17,20 €</span>
+                            </div>
+                            <p class="ingredients" data-i18n="pizza_4_desc">Valkoinen pohja, fior di latte, gorgonzola D.O.P., pecorino romano, parmigiano reggiano, hunaja.</p>
+                        </div>
+                    </article>
+
+                    <!-- Menu Item 5 -->
+                    <article class="menu-card fade-in">
+                        <div class="menu-card-image">
+                            <img src="assets/images/tartufata.jpg" alt="Tartufata Pizza" width="400" height="300" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?auto=format&fit=crop&w=600&q=80'">
+                            <span class="dietary-badge" data-i18n="badge_veg">Kasvis</span>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-card-header">
+                                <h3>Tartufata</h3>
+                                <span class="price">18,00 €</span>
+                            </div>
+                            <p class="ingredients" data-i18n="pizza_5_desc">Mascarpone-pohja, fior di latte, tatteja, tryffeliöljy, tuore rucola, parmesaanilastut.</p>
+                        </div>
+                    </article>
+
+                    <!-- Menu Item 6 -->
+                    <article class="menu-card fade-in">
+                        <div class="menu-card-image">
+                            <img src="assets/images/marinara.jpg" alt="Marinara Speciale Pizza" width="400" height="300" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1588315029754-2dd089d39a1a?auto=format&fit=crop&w=600&q=80'">
+                            <span class="dietary-badge vegan" data-i18n="badge_vegan">Vegaani</span>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-card-header">
+                                <h3>Marinara Speciale</h3>
+                                <span class="price">13,00 €</span>
+                            </div>
+                            <p class="ingredients" data-i18n="pizza_6_desc">San Marzano -tomaatti, valkosipuli, oregano, kirsikkatomaatti, tuore basilika, ekstra-neitsytoliiviöljy.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="menu-action text-center">
+                    <button class="btn btn-secondary" id="full-menu-btn" data-i18n="btn_full_menu">Katso Koko Menu (PDF)</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials section-padding" id="reviews">
+            <div class="container">
+                <div class="section-header text-center fade-in">
+                    <span class="section-subtitle" data-i18n="rev_subtitle">Asiakkaidemme Suusta</span>
+                    <h2 class="section-title" data-i18n="rev_title">Mitä Meistä Sanotaan</h2>
+                </div>
+
+                <div class="testimonials-grid">
+                    <div class="testimonial-card fade-in">
+                        <div class="review-stars">★★★★★</div>
+                        <p class="review-text" data-i18n="rev_1_text">"Turun paras napolilainen pizza ilman epäilystäkään! Pohja on täydellisen kuohkea ja täytteet erittäin laadukkaita."</p>
+                        <div class="review-author">
+                            <div class="author-avatar">M</div>
+                            <div class="author-info">
+                                <h4>Matti K.</h4>
+                                <span>Google Review</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card fade-in">
+                        <div class="review-stars">★★★★★</div>
+                        <p class="review-text" data-i18n="rev_2_text">"Tunnelma oli kuin Italiassa. Ilmoittivat, että taikinaa kohotetaan 48h ja sen kyllä maistaa. Ehdoton suositus Parma & Burratallle!"</p>
+                        <div class="review-author">
+                            <div class="author-avatar">S</div>
+                            <div class="author-info">
+                                <h4>Sofia H.</h4>
+                                <span>TripAdvisor</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card fade-in">
+                        <div class="review-stars">★★★★★</div>
+                        <p class="review-text" data-i18n="rev_3_text">"Ystävällinen palvelu ja upeat viinit pizzan kaveriksi. Varaa pöytä etukäteen, paikka on ansaitusti suosittu."</p>
+                        <div class="review-author">
+                            <div class="author-avatar">J</div>
+                            <div class="author-info">
+                                <h4>Juha P.</h4>
+                                <span>Google Review</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Banner Section -->
+        <section class="cta-banner">
+            <div class="cta-overlay"></div>
+            <div class="container cta-container text-center fade-in">
+                <h2 data-i18n="cta_title">Tule kokemaan aito napolilainen elämys</h2>
+                <p data-i18n="cta_desc">Varmista paikkasi suositussa ravintolassamme tai tilaa noudettavaksi.</p>
+                <div class="cta-buttons">
+                    <button class="btn btn-primary reserve-trigger" data-i18n="btn_reserve">Varaa Pöytä</button>
+                    <a href="tel:+35821234567" class="btn btn-outline">
+                        <span class="phone-icon">📞</span> 02 123 4567
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact & Footer Section -->
+        <footer class="contact-footer section-padding" id="contact">
+            <div class="container">
+                <div class="grid grid-2-col contact-grid">
+                    <!-- Contact Form & Details -->
+                    <div class="contact-info fade-in">
+                        <span class="section-subtitle" data-i18n="contact_subtitle">Tervetuloa Kylään</span>
+                        <h2 class="section-title" data-i18n="contact_title">Yhteystiedot & Aukiolo</h2>
+
+                        <div class="info-blocks">
+                            <div class="info-item">
+                                <span class="info-icon">📍</span>
+                                <div>
+                                    <strong data-i18n="info_address_title">Osoite</strong>
+                                    <p>Esimerkkikatu 12, 20100 Turku</p>
+                                </div>
+                            </div>
+
+                            <div class="info-item">
+                                <span class="info-icon">🕒</span>
+                                <div>
+                                    <strong data-i18n="info_hours_title">Aukioloajat</strong>
+                                    <p data-i18n="info_hours_week">Ma - To: 11:00 - 21:00</p>
+                                    <p data-i18n="info_hours_fri_sat">Pe - La: 11:00 - 23:00</p>
+                                    <p data-i18n="info_hours_sun">Su: 12:00 - 21:00</p>
+                                </div>
+                            </div>
+
+                            <div class="info-item">
+                                <span class="info-icon">✉️</span>
+                                <div>
+                                    <strong data-i18n="info_contact_title">Ota Yhteyttä</strong>
+                                    <p>info@pizzeriaturku.fi</p>
+                                    <p>+358 2 123 4567</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Social Media Links -->
+                        <div class="social-links">
+                            <a href="#" class="social-link" aria-label="Facebook">
+                                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/></svg>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Instagram">
+                                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Map Embed Placeholder -->
+                    <div class="map-container fade-in">
+                        <iframe 
+                            title="Pizzeria Turku Sijainti"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31518.397072554017!2d22.250000!3d60.451700!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x468c765320000001%3A0x0!2sTurku!5e0!3m2!1sfi!2sfi!4v1600000000000!5m2!1sfi!2sfi" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+
+                <div class="footer-bottom text-center">
+                    <p data-i18n="footer_copy">&copy; 2025 Pizzeria Turku. Kaikki oikeudet pidätetään.</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Reservation Modal -->
+    <div class="modal" id="reservation-modal" aria-hidden="true" role="dialog" aria-labelledby="modal-title">
+        <div class="modal-overlay" tabindex="-1" data-close-modal></div>
+        <div class="modal-container">
+            <button class="modal-close" aria-label="Sulje" data-close-modal>&times;</button>
+            <div class="modal-header">
+                <h3 id="modal-title" data-i18n="modal_title">Varaa Pöytä</h3>
+                <p data-i18n="modal_subtitle">Täytä tiedot ja vahvistamme varauksen sähköpostitse.</p>
+            </div>
+            
+            <form id="reservation-form" class="modal-form">
+                <div class="form-group">
+                    <label for="res-name" data-i18n="form_name">Nimi *</label>
+                    <input type="text" id="res-name" required placeholder="Matti Meikäläinen">
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="res-email" data-i18n="form_email">Sähköposti *</label>
+                        <input type="email" id="res-email" required placeholder="matti@esimerkki.fi">
+                    </div>
+                    <div class="form-group">
+                        <label for="res-phone" data-i18n="form_phone">Puhelin *</label>
+                        <input type="tel" id="res-phone" required placeholder="040 123 4567">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="res-date" data-i18n="form_date">Päivämäärä *</label>
+                        <input type="date" id="res-date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="res-time" data-i18n="form_time">Aika *</label>
+                        <select id="res-time" required>
+                            <option value="12:00">12:00</option>
+                            <option value="14:00">14:00</option>
+                            <option value="17:00">17:00</option>
+                            <option value="19:00">19:00</option>
+                            <option value="21:00">21:00</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="res-guests" data-i18n="form_guests">Henkilömäärä *</label>
+                        <select id="res-guests" required>
+                            <option value="1">1 hlö</option>
+                            <option value="2" selected>2 hlöä</option>
+                            <option value="4">4 hlöä</option>
+                            <option value="6">6 hlöä</option>
+                            <option value="8+">8+ hlöä</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="res-notes" data-i18n="form_notes">Erityistoiveet / Allergiat</label>
+                    <textarea id="res-notes" rows="3" placeholder="..."></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block" data-i18n="btn_submit_reservation">Vahvista Varaus</button>
+            </form>
+
+            <div id="form-success-message" class="form-success-message hidden">
+                <span class="success-icon">✓</span>
+                <h4 data-i18n="success_title">Kiitos varauksestasi!</h4>
+                <p data-i18n="success_desc">Olemme vastaanottaneet pöytävarauksesi ja lähetämme vahvistuksen sähköpostiisi pian.</p>
+                <button class="btn btn-secondary" data-close-modal data-i18n="btn_close">Sulje</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
