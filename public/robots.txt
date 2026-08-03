@@ -1,4 +1,35 @@
+# Robots.txt for alexlundstrom.fi
+# Allow all bots to crawl the entire site for maximum SEO visibility
+
 User-agent: *
 Allow: /
+Disallow: /node_modules/
+Disallow: /.git/
 
-Sitemap: https://alexlundstrom.com/sitemap.xml
+# Google-specific rules for optimal crawling
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /images/
+
+User-agent: Googlebot-Mobile
+Allow: /
+
+# Bing
+User-agent: Bingbot
+Allow: /
+
+# Other search engines
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# Bad bots - Block common bad bots
+User-agent: MJ12bot
+Allow: /
+
+# Sitemap reference for Google Search Console
+Sitemap: https://alexlundstrom.fi/sitemap.xml
