@@ -904,6 +904,16 @@ body.lang-fi .lang-en-label {
   text-decoration: underline;
 }
 
+.footer-bottom a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    color: #d1d5db;
+    text-decoration: underline;
+}
+
 .socials {
   margin-top: 16px;
 }
