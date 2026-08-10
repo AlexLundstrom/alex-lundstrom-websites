@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Esimerkki - Putkityöt ja lämmityspalvelut | Ruovesi, Ikaalinen, Kangasala</title>
+    <meta name="description" content="Esimerkki tarjoaa putki- ja lämmityspalveluita kotitalouksille ja kiinteistöille Ruovedellä, Ikaalisissa, Kangasalla ja lähialueilla.">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Esimerkki - Putkityöt ja lämmityspalvelut">
+    <meta property="og:description" content="Putkiasennukset, korjaukset ja lämmitysjärjestelmien työt Ruovedellä, Ikaalisissa ja Kangasalla.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://alexlundstrom.fi/demos/hervannan_putkipalvelu/">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1200&q=80">
+    
+    <!-- Canonical Placeholder -->
+    <link rel="canonical" href="https://alexlundstrom.fi/demos/hervannan_putkipalvelu/">
+    
+    <!-- Favicon Placeholders -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔧</text></svg>">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container header-container">
+            <a href="#home" class="logo" aria-label="Esimerkki Etusivu">
+                <span class="logo-text">ESIMERKKI</span>
+            </a>
+
+            <nav class="nav-menu" id="nav-menu" aria-label="Päävalikko">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link active" data-i18n="nav_home">Etusivu</a></li>
+                    <li><a href="#services" class="nav-link" data-i18n="nav_services">Palvelut</a></li>
+                    <li><a href="#service-area" class="nav-link" data-i18n="nav_area">Toiminta-alue</a></li>
+                    <li><a href="#about" class="nav-link" data-i18n="nav_about">Meistä</a></li>
+                    <li><a href="#contact" class="nav-link" data-i18n="nav_contact">Yhteystiedot</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <div class="lang-switcher">
+                    <button id="lang-toggle" class="btn-lang" aria-label="Vaihda kieli / Switch language">
+                        <span id="lang-current">FI</span> / <span id="lang-other">EN</span>
+                    </button>
+                </div>
+
+                <button class="hamburger" id="hamburger-btn" aria-expanded="false" aria-controls="nav-menu" aria-label="Avaa valikko">
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container hero-container">
+                <div class="hero-content fade-in-element">
+                    <h1 data-i18n="hero_title">Putkityöt ja lämmityspalvelut</h1>
+                    <p data-i18n="hero_sub">Putkiasennukset, korjaukset ja lämmitysjärjestelmien työt Ruovedellä, Ikaalisissa, Kangasalla ja lähialueilla.</p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary" data-i18n="hero_btn_quote">Pyydä tarjous</a>
+                        <a href="#contact" class="btn btn-secondary" data-i18n="hero_btn_contact">Ota yhteyttä</a>
+                    </div>
+                </div>
+                <div class="hero-image-wrap fade-in-element">
+                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1000&q=80" 
+                         alt="Putkiasentaja työssään" 
+                         width="600" 
+                         height="400" 
+                         class="hero-img">
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services section-padding">
+            <div class="container">
+                <div class="section-header text-center fade-in-element">
+                    <h2 data-i18n="services_title">Palvelut</h2>
+                    <p data-i18n="services_intro">Tarjoamme putki- ja lämmityspalveluita koteihin ja muihin kiinteistöihin.</p>
+                </div>
+
+                <div class="services-grid">
+                    <!-- Service 1 -->
+                    <article class="service-card fade-in-element">
+                        <div class="service-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?auto=format&fit=crop&w=600&q=80" 
+                                 alt="Putkityöt ja putkiasennus" 
+                                 loading="lazy" 
+                                 width="400" 
+                                 height="250">
+                        </div>
+                        <div class="service-body">
+                            <h3 data-i18n="s1_title">Putkityöt</h3>
+                            <p data-i18n="s1_desc">Putkiasennukset, korjaukset ja muut putkityöt.</p>
+                        </div>
+                    </article>
+
+                    <!-- Service 2 -->
+                    <article class="service-card fade-in-element">
+                        <div class="service-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1585338107529-13afc5f02586?auto=format&fit=crop&w=600&q=80" 
+                                 alt="Lämminvesivaraajan asennus" 
+                                 loading="lazy" 
+                                 width="400" 
+                                 height="250">
+                        </div>
+                        <div class="service-body">
+                            <h3 data-i18n="s2_title">Lämminvesivaraajat</h3>
+                            <p data-i18n="s2_desc">Lämminvesivaraajien asennukset ja vaihdot.</p>
+                        </div>
+                    </article>
+
+                    <!-- Service 3 -->
+                    <article class="service-card fade-in-element">
+                        <div class="service-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1542013936693-884638332954?auto=format&fit=crop&w=600&q=80" 
+                                 alt="Öljypolttimet ja lämmitysjärjestelmät" 
+                                 loading="lazy" 
+                                 width="400" 
+                                 height="250">
+                        </div>
+                        <div class="service-body">
+                            <h3 data-i18n="s3_title">Öljypolttimet ja öljysäiliöt</h3>
+                            <p data-i18n="s3_desc">Öljypolttimiin ja öljysäiliöihin liittyvät työt.</p>
+                        </div>
+                    </article>
+
+                    <!-- Service 4 -->
+                    <article class="service-card fade-in-element">
+                        <div class="service-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1542013936693-884638332954?auto=format&fit=crop&w=600&q=80" 
+                                 alt="Jätevesijärjestelmät ja puhdistamot" 
+                                 loading="lazy" 
+                                 width="400" 
+                                 height="250">
+                        </div>
+                        <div class="service-body">
+                            <h3 data-i18n="s4_title">Puhdistamot</h3>
+                            <p data-i18n="s4_desc">Puhdistamoihin ja jätevesijärjestelmiin liittyvät työt.</p>
+                        </div>
+                    </article>
+
+                    <!-- Service 5 -->
+                    <article class="service-card fade-in-element">
+                        <div class="service-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=600&q=80" 
+                                 alt="Ammattitaitoinen putkiasentaja" 
+                                 loading="lazy" 
+                                 width="400" 
+                                 height="250">
+                        </div>
+                        <div class="service-body">
+                            <h3 data-i18n="s5_title">Putkiasentaja</h3>
+                            <p data-i18n="s5_desc">Putkiasentaja kotiin ja muihin kiinteistöihin.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service Area Section -->
+        <section id="service-area" class="service-area section-padding bg-light">
+            <div class="container">
+                <div class="area-grid align-center">
+                    <div class="area-text fade-in-element">
+                        <h2 data-i18n="area_title">Palvelemme lähialueilla</h2>
+                        <p class="lead-text" data-i18n="area_text">Toimimme Ruoveden, Ikaalisten ja Kangasalan alueilla sekä lähikunnissa.</p>
+                        
+                        <ul class="area-list">
+                            <li>
+                                <span class="area-icon">📍</span>
+                                <div>
+                                    <strong>Ruovesi</strong>
+                                    <span data-i18n="area_ruovesi_sub">sekä lähikunnat</span>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="area-icon">📍</span>
+                                <div>
+                                    <strong>Ikaalinen</strong>
+                                    <span data-i18n="area_ikaalinen_sub">sekä lähikunnat</span>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="area-icon">📍</span>
+                                <div>
+                                    <strong>Kangasala</strong>
+                                    <span data-i18n="area_kangasala_sub">sekä lähikunnat</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="map-placeholder fade-in-element">
+                        <iframe 
+                            title="Toiminta-alue kartalla"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d451234.12345678!2d23.7!3d61.7!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x468f184712345678%3A0x123456789abcdef!2sPirkanmaa!5e0!3m2!1sfi!2sfi!4v1620000000000!5m2!1sfi!2sfi" 
+                            width="100%" 
+                            height="350" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about section-padding">
+            <div class="container">
+                <div class="about-card fade-in-element">
+                    <h2 data-i18n="about_title">Esimerkki</h2>
+                    <p class="lead-text" data-i18n="about_p1">Esimerkki tarjoaa putki- ja lämmityspalveluita kotitalouksille ja muille asiakkaille.</p>
+                    <p data-i18n="about_p2">Palveluihin kuuluvat muun muassa putkityöt, lämminvesivaraajat, öljypolttimet, öljysäiliöt ja puhdistamot.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact / Form Section -->
+        <section id="contact" class="contact section-padding bg-light">
+            <div class="container">
+                <div class="section-header text-center fade-in-element">
+                    <h2 data-i18n="contact_cta_title">Tarvitsetko putkiasentajaa?</h2>
+                    <p data-i18n="contact_cta_text">Ota yhteyttä ja kerro, millaista työtä tarvitset.</p>
+                </div>
+
+                <div class="contact-grid">
+                    <!-- Contact Info -->
+                    <div class="contact-info fade-in-element">
+                        <div class="info-item">
+                            <h3>Esimerkki</h3>
+                            <p data-i18n="footer_subtitle">Putkityöt ja lämmityspalvelut</p>
+                        </div>
+                        <div class="info-item">
+                            <strong data-i18n="contact_phone_label">Puhelin:</strong>
+                            <p><a href="tel:+358401234567">+358 40 123 4567</a></p>
+                        </div>
+                        <div class="info-item">
+                            <strong data-i18n="contact_email_label">Sähköposti:</strong>
+                            <p><a href="mailto:info@example.fi">info@example.fi</a></p>
+                        </div>
+                        <div class="info-item">
+                            <strong data-i18n="contact_area_label">Toimialue:</strong>
+                            <p data-i18n="contact_area_val">Ruovesi, Ikaalinen, Kangasala ja lähialueet</p>
+                        </div>
+                        <div class="info-actions">
+                            <a href="tel:+358401234567" class="btn btn-primary" data-i18n="btn_call">Soita</a>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="contact-form-wrap fade-in-element">
+                        <form id="contact-form" class="contact-form" novalidate>
+                            <div id="form-message" class="form-message hidden" role="alert"></div>
+
+                            <div class="form-group">
+                                <label for="name" data-i18n="label_name">Nimi</label>
+                                <input type="text" id="name" name="name" required placeholder="Matti Meikäläinen" data-i18n-ph="ph_name">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email" data-i18n="label_email">Sähköposti</label>
+                                <input type="email" id="email" name="email" required placeholder="matti@esimerkki.fi" data-i18n-ph="ph_email">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone" data-i18n="label_phone">Puhelin</label>
+                                <input type="tel" id="phone" name="phone" placeholder="040 123 4567" data-i18n-ph="ph_phone">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message" data-i18n="label_message">Viesti</label>
+                                <textarea id="message" name="message" rows="4" required placeholder="Kuvaile tarvitsemaasi työtä..." data-i18n-ph="ph_message"></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-block" data-i18n="btn_send">Lähetä viesti</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>ESIMERKKI</h3>
+                    <p data-i18n="footer_subtitle">Putkityöt ja lämmityspalvelut</p>
+                    <p class="footer-areas" data-i18n="footer_service_areas">Ruovesi · Ikaalinen · Kangasala</p>
+                </div>
+
+                <div class="footer-contact">
+                    <p><strong>Puh:</strong> <a href="tel:+358401234567">+358 40 123 4567</a></p>
+                    <p><strong>Sähköposti:</strong> <a href="mailto:info@example.fi">info@example.fi</a></p>
+                </div>
+
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="#home" data-i18n="nav_home">Etusivu</a></li>
+                        <li><a href="#services" data-i18n="nav_services">Palvelut</a></li>
+                        <li><a href="#service-area" data-i18n="nav_area">Toiminta-alue</a></li>
+                        <li><a href="#about" data-i18n="nav_about">Meistä</a></li>
+                        <li><a href="#contact" data-i18n="nav_contact">Yhteystiedot</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom text-center">
+                <p>&copy; 2026 Esimerkki. <span data-i18n="footer_demo_note" class="demo-disclaimer">Esimerkkisivusto – tiedot eivät ole oikeita.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>
