@@ -1,0 +1,748 @@
+/* Annotated Report: tokens in DESIGN.md. */
+
+@font-face {
+  font-family: "Source Serif 4";
+  font-style: normal;
+  font-weight: 200 900;
+  font-display: swap;
+  src: url("../assets/fonts/source-serif-4-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Source Serif 4";
+  font-style: normal;
+  font-weight: 200 900;
+  font-display: swap;
+  src: url("../assets/fonts/source-serif-4-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Atkinson Hyperlegible Next";
+  font-style: normal;
+  font-weight: 200 800;
+  font-display: swap;
+  src: url("../assets/fonts/atkinson-hyperlegible-next-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Atkinson Hyperlegible Next";
+  font-style: normal;
+  font-weight: 200 800;
+  font-display: swap;
+  src: url("../assets/fonts/atkinson-hyperlegible-next-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+:root {
+  color-scheme: light dark;
+
+  --paper: #f5f6f4;
+  --ink: #1b1f24;
+  --graphite: #5a626b;
+  --rule: #d5d9dd;
+  --marker: #f2d04b;
+
+  --serif: "Source Serif 4", "Iowan Old Style", Georgia, serif;
+  --sans: "Atkinson Hyperlegible Next", "Segoe UI", system-ui, sans-serif;
+
+  --t-display: clamp(2.5rem, 1.6rem + 3.6vw, 4.5rem);
+  --t-h2: clamp(1.875rem, 1.5rem + 1vw, 2.25rem);
+  --t-h3: 1.5rem;
+  --t-lede: clamp(1.1875rem, 1.1rem + 0.4vw, 1.3125rem);
+  --t-body: 1.0625rem;
+  --t-note: 0.875rem;
+  --t-ui: 0.9375rem;
+
+  --s-1: 0.25rem;
+  --s-2: 0.5rem;
+  --s-3: 0.9rem;
+  --s-4: 1.8rem;
+  --s-5: 3.6rem;
+  --s-6: 5.4rem;
+  --s-7: 8rem;
+
+  --measure: 38rem;
+  --note-w: 15rem;
+  --note-gap: 3rem;
+  --gutter: max(1rem, 4vw);
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #1a1e23;
+    --ink: #e6e8ea;
+    --graphite: #a3abb4;
+    --rule: #343a41;
+    --marker: #6b5a12;
+  }
+}
+
+/* Base */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  scrollbar-color: var(--rule) var(--paper);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: var(--t-body);
+  line-height: 1.6;
+  font-variant-numeric: oldstyle-nums proportional-nums;
+  font-optical-sizing: auto;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--rule);
+  color: var(--ink);
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+dl,
+dd {
+  margin: 0;
+}
+
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 600;
+  text-wrap: balance;
+}
+
+p,
+li,
+dd {
+  text-wrap: pretty;
+}
+
+a {
+  color: var(--ink);
+  text-decoration-line: underline;
+  text-decoration-color: var(--graphite);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+  transition: text-decoration-color 160ms var(--ease), text-decoration-thickness 160ms var(--ease);
+}
+
+a:hover {
+  text-decoration-color: var(--ink);
+  text-decoration-thickness: 2px;
+}
+
+:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: var(--s-1);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.skip-link {
+  position: absolute;
+  top: var(--s-2);
+  left: var(--gutter);
+  z-index: 10;
+  padding: var(--s-2) var(--s-3);
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--sans);
+  font-size: var(--t-ui);
+  transform: translateY(-200%);
+}
+
+.skip-link:focus {
+  transform: none;
+}
+
+/* Page frame */
+
+/* The frame is exactly as wide as its columns and centred in the window at every size. */
+.frame {
+  max-width: calc(var(--measure) + 2 * var(--gutter));
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.content {
+  max-width: var(--measure);
+}
+
+/* Header */
+
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-2) var(--s-4);
+  padding-block: var(--s-3);
+  font-family: var(--sans);
+  font-size: var(--t-ui);
+  line-height: 1.3;
+}
+
+/* The header name only appears in the xl rail, once the h1 has scrolled away. */
+.site-header .brand {
+  display: none;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.site-nav ul {
+  display: flex;
+  gap: var(--s-4);
+}
+
+/* Phones: only the contact link stays in the header. */
+.site-nav li:not(:last-child) {
+  display: none;
+}
+
+.site-nav {
+  margin-left: auto;
+}
+
+.site-header a,
+.lang > * {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+
+.site-nav a {
+  text-decoration-color: transparent;
+}
+
+.site-nav a:hover,
+.site-nav a[aria-current="true"] {
+  text-decoration-color: var(--ink);
+}
+
+/* The language switch sits top right at every width, outside the header rail. */
+.frame {
+  position: relative;
+}
+
+.site-header {
+  padding-right: 5.5rem;
+}
+
+.lang {
+  position: absolute;
+  top: var(--s-3);
+  right: var(--gutter);
+  display: flex;
+  align-items: center;
+  gap: var(--s-2);
+  font-family: var(--sans);
+  font-size: var(--t-ui);
+  line-height: 1.3;
+  color: var(--graphite);
+}
+
+.lang a {
+  padding-inline: var(--s-1);
+  color: var(--graphite);
+}
+
+.lang [aria-current] {
+  padding-inline: var(--s-1);
+  color: var(--ink);
+  font-weight: 700;
+}
+
+/* Introduction */
+
+.intro {
+  padding-block: var(--s-5) var(--s-4);
+}
+
+.intro h1 {
+  font-size: var(--t-display);
+  font-variation-settings: "opsz" 60;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.role {
+  margin-top: var(--s-3);
+  font-family: var(--sans);
+  font-size: var(--t-ui);
+  color: var(--graphite);
+}
+
+.lede {
+  margin-top: var(--s-4);
+  font-size: var(--t-lede);
+  line-height: 1.5;
+}
+
+/* Sections */
+
+.section {
+  margin-top: var(--s-5);
+  padding-top: var(--s-4);
+  border-top: 1px solid var(--rule);
+  scroll-margin-top: var(--s-4);
+}
+
+.section h2 {
+  font-size: var(--t-h2);
+  font-variation-settings: "opsz" 36;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+.section h3 {
+  margin-top: var(--s-5);
+  font-size: var(--t-h3);
+  line-height: 1.25;
+}
+
+.section h2 + *,
+.section h3 + * {
+  margin-top: var(--s-3);
+}
+
+.section p + p {
+  margin-top: var(--s-3);
+}
+
+.section-lede {
+  font-size: var(--t-lede);
+  line-height: 1.5;
+}
+
+/* Side notes */
+
+.ref {
+  font-family: var(--sans);
+  font-size: 0.7em;
+  font-weight: 700;
+  font-variant-numeric: lining-nums;
+  line-height: 0;
+  vertical-align: super;
+  text-decoration: none;
+  padding: 0 0.15em;
+  margin-left: 0.05em;
+  box-shadow: inset 0 -0.18em 0 var(--marker);
+  transition: background-color 160ms var(--ease);
+}
+
+.note {
+  display: block;
+  margin: var(--s-2) 0 var(--s-3);
+  padding: var(--s-2) var(--s-3);
+  font-family: var(--sans);
+  font-size: var(--t-note);
+  line-height: 1.45;
+  color: var(--graphite);
+  font-variant-numeric: lining-nums;
+  transition: background-color 160ms var(--ease), color 160ms var(--ease);
+}
+
+.note-num {
+  font-weight: 700;
+  color: var(--ink);
+  margin-right: var(--s-2);
+  padding: 0 0.15em;
+  box-shadow: inset 0 -0.25em 0 var(--marker);
+}
+
+/* A note sits at the end of the paragraph that holds its reference. */
+.ref:hover,
+.ref:focus-visible,
+.ref:has(~ .note:hover) {
+  background-color: var(--marker);
+}
+
+.ref:hover ~ .note,
+.ref:focus-visible ~ .note,
+.note:hover {
+  background-color: var(--marker);
+  color: var(--ink);
+}
+
+/* Facts: status block and grouped lists */
+
+.facts {
+  display: grid;
+  grid-template-columns: minmax(7rem, max-content) 1fr;
+  gap: var(--s-2) var(--s-4);
+  margin-top: var(--s-4);
+  font-family: var(--sans);
+  font-size: var(--t-ui);
+  line-height: 1.4;
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+.facts dt {
+  color: var(--graphite);
+}
+
+.facts dd a {
+  overflow-wrap: anywhere;
+}
+
+/* CyberLab: what I learnt, evidence excerpt, network diagram */
+
+.learned {
+  margin-top: var(--s-4);
+}
+
+.learned dt {
+  font-weight: 600;
+  margin-top: var(--s-4);
+}
+
+.learned dt:first-child {
+  margin-top: 0;
+}
+
+.learned dd {
+  margin-top: var(--s-1);
+}
+
+.section p.more {
+  margin-top: var(--s-3);
+  font-family: var(--sans);
+  font-size: var(--t-ui);
+}
+
+.section figure {
+  margin: var(--s-4) 0;
+}
+
+/* Project screenshots and video: full text width, framed with a hairline so white UIs keep an edge. */
+.media img,
+.media video {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--rule);
+  background: var(--paper);
+  accent-color: var(--ink);
+}
+
+/* The lab diagram is a black-on-white drawing; it keeps a white plate in both schemes. */
+.diagram img {
+  display: block;
+  width: 100%;
+  max-width: 34rem;
+  height: auto;
+  background: #fff;
+}
+
+/* Course and skill lists */
+
+/* Courses grouped by field: name above the list on phones, beside it from 40rem. */
+.courses {
+  margin-top: var(--s-4);
+}
+
+.courses dt {
+  font-family: var(--sans);
+  font-size: var(--t-ui);
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.courses dt:not(:first-child) {
+  margin-top: var(--s-4);
+}
+
+.courses dd {
+  margin-top: var(--s-2);
+}
+
+.courses li + li {
+  margin-top: var(--s-1);
+}
+
+@media (min-width: 40rem) {
+  .courses {
+    display: grid;
+    grid-template-columns: 13rem 1fr;
+    gap: var(--s-4) var(--s-4);
+  }
+
+  .courses dt:not(:first-child),
+  .courses dd {
+    margin-top: 0;
+  }
+
+  .courses dt {
+    padding-top: 0.2em;
+  }
+}
+
+.skills {
+  margin-top: var(--s-4);
+}
+
+.skills dt {
+  font-weight: 600;
+  margin-top: var(--s-4);
+}
+
+.skills dt:first-child {
+  margin-top: 0;
+}
+
+.skills dd {
+  margin-top: var(--s-1);
+}
+
+/* Contact and footer */
+
+.contact-list {
+  margin-top: var(--s-4);
+  font-family: var(--sans);
+  font-size: 1.0625rem;
+  line-height: 1.4;
+}
+
+.contact-list li {
+  display: grid;
+  grid-template-columns: 7.5rem 1fr;
+  gap: var(--s-4);
+  padding-block: var(--s-3);
+  border-bottom: 1px solid var(--rule);
+}
+
+.contact-list li:first-child {
+  border-top: 1px solid var(--rule);
+}
+
+.contact-list span:first-child {
+  color: var(--graphite);
+}
+
+.contact-list a {
+  overflow-wrap: anywhere;
+}
+
+.file-meta {
+  color: var(--graphite);
+  font-size: var(--t-note);
+}
+
+.site-footer {
+  margin-top: var(--s-6);
+  padding-block: var(--s-4) var(--s-5);
+  font-family: var(--sans);
+  font-size: var(--t-note);
+  color: var(--graphite);
+}
+
+.site-footer a {
+  color: var(--graphite);
+}
+
+/* md: section links in the header */
+
+@media (min-width: 40rem) {
+  body {
+    font-size: 1.125rem;
+  }
+
+  .site-nav {
+    margin-left: 0;
+  }
+
+  .site-nav li:not(:last-child) {
+    display: list-item;
+  }
+
+  .site-header {
+    padding-block: var(--s-4) 0;
+  }
+
+  .lang {
+    top: var(--s-4);
+  }
+
+  .intro {
+    padding-top: var(--s-6);
+  }
+
+  .section {
+    margin-top: var(--s-6);
+  }
+}
+
+@media (max-width: 39.99rem) {
+  .site-nav a {
+    text-decoration-color: var(--graphite);
+  }
+}
+
+@media (max-width: 47.99rem) {
+  .site-nav ul {
+    gap: var(--s-3);
+  }
+}
+
+@media (max-width: 30rem) {
+  .contact-list li {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
+
+/* lg: notes move into the margin */
+
+@media (min-width: 64rem) {
+  .frame {
+    max-width: calc(var(--measure) + var(--note-gap) + var(--note-w) + 2 * var(--gutter));
+  }
+
+  .content {
+    margin-right: calc(var(--note-w) + var(--note-gap));
+  }
+
+  .note {
+    float: right;
+    clear: right;
+    width: var(--note-w);
+    margin: 0.35em calc(-1 * (var(--note-w) + var(--note-gap)) - var(--s-2)) var(--s-3) 0;
+    padding: var(--s-1) var(--s-2);
+  }
+
+  .site-header,
+  .site-footer {
+    max-width: calc(var(--measure) + var(--note-gap) + var(--note-w));
+  }
+}
+
+/* xl: sticky section index on the left */
+
+@media (min-width: 80rem) {
+  .frame {
+    display: grid;
+    grid-template-columns: 10rem minmax(0, calc(var(--measure) + var(--note-gap) + var(--note-w)));
+    column-gap: 4rem;
+    max-width: calc(14rem + var(--measure) + var(--note-gap) + var(--note-w) + 2 * var(--gutter));
+  }
+
+  .site-header {
+    grid-row: 1 / span 3;
+    align-self: start;
+    position: sticky;
+    top: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: var(--s-4);
+    padding-top: var(--s-6);
+  }
+
+  .site-nav ul {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .site-nav a {
+    min-height: 2.25rem;
+    color: var(--graphite);
+  }
+
+  .site-nav a:hover,
+  .site-nav a[aria-current="true"] {
+    color: var(--ink);
+    text-decoration-color: var(--ink);
+    text-decoration-thickness: 2px;
+  }
+
+  .site-header {
+    padding-right: 0;
+  }
+
+  /* Above the notes column, level with the top of the rail. */
+  .lang {
+    top: var(--s-6);
+    right: auto;
+    left: calc(var(--gutter) + 14rem + var(--measure) + var(--note-gap));
+  }
+
+  .site-header .brand {
+    display: inline-flex;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 160ms var(--ease), visibility 160ms;
+  }
+
+  .intro-passed .site-header .brand {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  main,
+  .site-footer {
+    grid-column: 2;
+  }
+
+  .intro {
+    padding-top: var(--s-6);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0ms !important;
+  }
+}
+
+@media print {
+  .site-header,
+  .skip-link {
+    display: none;
+  }
+
+  .note {
+    float: none;
+    width: auto;
+    margin: var(--s-2) 0;
+  }
+}

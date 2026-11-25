@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alex Lundström</title>
+  <meta name="description" content="Alex Lundström">
+  <meta name="theme-color" content="#f5f6f4" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1a1e23" media="(prefers-color-scheme: dark)">
+
+  <link rel="canonical" href="https://alexlundstrom.fi/portfolio/en/">
+  <link rel="alternate" hreflang="fi" href="https://alexlundstrom.fi/portfolio/">
+  <link rel="alternate" hreflang="en" href="https://alexlundstrom.fi/portfolio/en/">
+  <link rel="alternate" hreflang="x-default" href="https://alexlundstrom.fi/portfolio/">
+
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Alex Lundström">
+  <meta property="og:description" content="Portfolio">
+  <meta property="og:url" content="https://alexlundstrom.fi/portfolio/en/">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:locale:alternate" content="fi_FI">
+
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="../assets/fonts/source-serif-4-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/main.js" defer></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Alex Lundström",
+    "url": "https://alexlundstrom.fi/portfolio/en/",
+    "affiliation": { "@type": "CollegeOrUniversity", "name": "Tampere University" },
+    "knowsAbout": ["Cybersecurity", "Computer networking", "Security protocols"],
+    "sameAs": ["https://github.com/AlexLundstrom"]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+
+  <div class="frame">
+    <header class="site-header">
+      <a class="brand" href="#top">Alex Lundström</a>
+      <nav class="site-nav" aria-label="Sections">
+        <ul>
+          <li><a href="#homelab">Homelab</a></li>
+          <li><a href="#websites">Websites</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <p class="lang">
+      <a href="../" hreflang="fi" lang="fi" aria-label="Suomeksi">FI</a>
+      <span aria-hidden="true">/</span>
+      <span aria-current="true">EN</span>
+    </p>
+
+    <main id="content">
+      <div class="content">
+
+        <section class="intro" id="top" aria-labelledby="name">
+          <h1 id="name">Alex Lundström</h1>
+          <p class="lede">
+            I am a fourth-year information technology student at Tampere University. I specialise in cybersecurity and communications engineering, but I have also studied software engineering. I have done several projects, some of which are presented below. I am currently writing my bachelor’s thesis, which covers secure data erasure on SSD drives.<a class="ref" id="ref-1" href="#note-1" aria-describedby="note-1">1</a> The thesis will be finished by the end of this year.<span class="note" id="note-1" role="note"><span class="note-num">1</span>More about the thesis under <a href="#thesis">Bachelor’s thesis</a>.</span>
+          </p>
+        </section>
+
+        <section class="section" id="homelab" aria-labelledby="homelab-title">
+          <h2 id="homelab-title">Homelab</h2>
+          <p class="section-lede">
+            I have built a homelab made up of virtual machines. The project is written in English. The Scenarios are for learning the most common attack methods and how to read the signs of an attack from log data, among other things.
+          </p>
+          <p>
+            In Scenario 01 SMB brute-force I carry out a brute-force attack on the other virtual machine, where I guess an account’s weak password and read a file from it. The Scenario is finished and available on GitHub.
+          </p>
+          <p>
+            In Scenario 02 Persistence the attacker installs persistent access on the virtual machine that survives a reboot. The Scenario is still in progress and will be published later.
+          </p>
+
+          <dl class="facts">
+            <dt>Lab</dt>
+            <dd>Kali Linux and Windows 11, VirtualBox</dd>
+            <dt>Source</dt>
+            <dd><a href="https://github.com/AlexLundstrom/cybersecurity-home-lab">cybersecurity-home-lab on GitHub</a></dd>
+          </dl>
+
+          <h3>What I learnt</h3>
+          <dl class="learned">
+            <dt>Building the homelab</dt>
+            <dd>I built the lab in VirtualBox on an isolated network with two different operating systems. I set up the network, user accounts, files and snapshots, and worked on both the Linux and Windows command lines.</dd>
+            <dt>Basics of penetration testing and red teaming</dt>
+            <dd>I carried out the attack from Kali. I scanned the target with Nmap, enumerated SMB with NetExec, broke into an account with a password list and read a file from the account.</dd>
+            <dt>Monitoring and reading logs</dt>
+            <dd>I read Windows security logs and learnt event IDs and logon types well enough to tell an attack apart from normal operation. With Wireshark I read network traffic and found the login attempts with filters.</dd>
+            <dt>Programming</dt>
+            <dd>I also learnt to write a detector in Python that finds the attack chain in the security log.</dd>
+          </dl>
+
+          <h3>How the lab is built</h3>
+          <figure class="diagram">
+            <img src="../assets/img/lab-network.png" width="1485" height="1115" loading="lazy" decoding="async" alt="Lab network: inside VirtualBox on the host PC, Kali Linux (attacker, 192.168.56.10) and Windows 11 (target, 192.168.56.20) are on the host-only network 192.168.56.0/24. Only Kali has a connection to the internet.">
+          </figure>
+        </section>
+
+        <section class="section" id="websites" aria-labelledby="websites-title">
+          <h2 id="websites-title">Websites</h2>
+          <p class="section-lede">
+            I build websites for companies under my own sole proprietorship. The business has its own site at <a href="https://alexlundstrom.fi">alexlundstrom.fi</a>.
+          </p>
+          <p>
+            I started building websites as a hobby and have been doing it for over four years. My university studies have deepened what I know about software development.
+          </p>
+          <p>
+            The site has two example sites, for a barber and a pizzeria. I made them for the portfolio, so their businesses and content are fictional.
+          </p>
+
+        </section>
+
+        <section class="section" id="projects" aria-labelledby="projects-title">
+          <h2 id="projects-title">Projects</h2>
+
+          <h3>EMI Node Editor</h3>
+          <p>
+            In spring 2026, on the Software Engineering Project 1 course, we built a visual programming tool in a group of seven students. I implemented the tool’s file system and wrote project documentation. I also helped implement the nodes’ functionality.
+          </p>
+          <dl class="facts">
+            <dt>Course</dt>
+            <dd>Software Engineering Project 1, spring 2026</dd>
+            <dt>Team</dt>
+            <dd>7 students</dd>
+            <dt>Language</dt>
+            <dd>C++</dd>
+            <dt>Source</dt>
+            <dd><a href="https://github.com/cuernatra/EMI-Node-Editor">EMI-Node-Editor on GitHub</a></dd>
+          </dl>
+          <figure class="media">
+            <img src="../assets/img/emi-node-editor.png" width="1279" height="748" loading="lazy" decoding="async" alt="The EMI editor: a node palette on the left, a program built from connected nodes in the middle, and a console at the bottom.">
+          </figure>
+
+          <h3>Movie recommender</h3>
+          <p>
+            The movie recommender suggests movies based on the user’s previous choices. I built the frontend with React and the backend with Flask.
+          </p>
+          <p>
+            I made the whole full stack application from scratch and deepened my understanding of how data is fetched from a database, how an algorithm calculates recommendations from that data, and how the results are routed to the frontend.
+          </p>
+          <dl class="facts">
+            <dt>Frontend</dt>
+            <dd>React</dd>
+            <dt>Backend</dt>
+            <dd>Flask</dd>
+            <dt>Source</dt>
+            <dd><a href="https://github.com/AlexLundstrom/movie-recommender">movie-recommender on GitHub</a></dd>
+          </dl>
+          <figure class="media">
+            <video controls preload="none" playsinline width="1840" height="932" poster="../assets/img/movie-recommender-poster.png" aria-label="Video of the movie recommender in use">
+              <source src="../assets/video/movie-recommender.mp4" type="video/mp4">
+              <a href="../assets/video/movie-recommender.mp4">Download the movie recommender video</a>
+            </video>
+          </figure>
+        </section>
+
+        <section class="section" id="education" aria-labelledby="education-title">
+          <h2 id="education-title">Education</h2>
+          <dl class="facts">
+            <dt>University</dt>
+            <dd>Tampere University</dd>
+            <dt>Field</dt>
+            <dd>Information technology, 4th year</dd>
+            <dt>Specialisation</dt>
+            <dd>Cybersecurity</dd>
+          </dl>
+
+          <h3 id="thesis">Bachelor’s thesis</h3>
+          <p>
+            My thesis covers secure data erasure on SSD drives. The thesis is in progress.
+          </p>
+
+          <h3>Core courses</h3>
+          <p>
+            The courses I have learnt the most from.
+          </p>
+          <dl class="courses">
+            <dt>Cybersecurity</dt>
+            <dd>
+              <ul>
+                <li>Security Protocols</li>
+                <li>Cryptography Engineering</li>
+                <li>Cybersecurity 1: Basics</li>
+              </ul>
+            </dd>
+            <dt>Communications engineering</dt>
+            <dd>
+              <ul>
+                <li>Computer Networking I and II</li>
+                <li>Computer Networks Laboratory Work I</li>
+                <li>Fundamentals of Wireless Communications</li>
+              </ul>
+            </dd>
+            <dt>Software engineering</dt>
+            <dd>
+              <ul>
+                <li>Programming 1, 2 and 3</li>
+                <li>Data Structures and Algorithms 1</li>
+                <li>Fundamentals of Databases</li>
+                <li>Software Engineering Project 1</li>
+                <li>Fundamentals of Artificial Intelligence</li>
+              </ul>
+            </dd>
+          </dl>
+        </section>
+
+        <section class="section" id="contact" aria-labelledby="contact-title">
+          <h2 id="contact-title">Contact</h2>
+          <p>The best way to reach me is by email or on LinkedIn.</p>
+          <!-- Add an English CV PDF when one exists. -->
+          <ul class="contact-list">
+            <li><span>Email</span> <a href="mailto:alexlundstrom42@gmail.com">alexlundstrom42@gmail.com</a></li>
+            <li><span>LinkedIn</span> <a href="https://www.linkedin.com/in/alex-lundstrom/">LinkedIn profile</a></li>
+            <li><span>GitHub</span> <a href="https://github.com/AlexLundstrom">github.com/AlexLundstrom</a></li>
+            <li><span>CV</span> <span><a href="../assets/cv/alex-lundstrom-cv-fi.pdf" download="Alex_Lundstrom_CV.pdf" hreflang="fi">Download CV</a> <span class="file-meta">PDF in Finnish, 560 KB</span></span></li>
+          </ul>
+        </section>
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 Alex Lundström. <a href="../" hreflang="fi" lang="fi">Lue suomeksi</a></p>
+    </footer>
+  </div>
+</body>
+</html>

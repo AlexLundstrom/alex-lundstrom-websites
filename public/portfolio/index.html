@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="fi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alex Lundström</title>
+  <meta name="description" content="Alex Lundström">
+  <meta name="theme-color" content="#f5f6f4" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1a1e23" media="(prefers-color-scheme: dark)">
+
+  <link rel="canonical" href="https://alexlundstrom.fi/portfolio/">
+  <link rel="alternate" hreflang="fi" href="https://alexlundstrom.fi/portfolio/">
+  <link rel="alternate" hreflang="en" href="https://alexlundstrom.fi/portfolio/en/">
+  <link rel="alternate" hreflang="x-default" href="https://alexlundstrom.fi/portfolio/">
+
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Alex Lundström">
+  <meta property="og:description" content="Portfoliosivu">
+  <meta property="og:url" content="https://alexlundstrom.fi/portfolio/">
+  <meta property="og:locale" content="fi_FI">
+  <meta property="og:locale:alternate" content="en_GB">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/source-serif-4-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Alex Lundström",
+    "url": "https://alexlundstrom.fi/portfolio/",
+    "affiliation": { "@type": "CollegeOrUniversity", "name": "Tampereen yliopisto" },
+    "knowsAbout": ["Kyberturvallisuus", "Tietoverkot", "Tietoturvaprotokollat"],
+    "sameAs": ["https://github.com/AlexLundstrom"]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#sisalto">Siirry sisältöön</a>
+
+  <div class="frame">
+    <header class="site-header">
+      <a class="brand" href="#alku">Alex Lundström</a>
+      <nav class="site-nav" aria-label="Osiot">
+        <ul>
+          <li><a href="#kyberlaboratorio">Homelab</a></li>
+          <li><a href="#verkkosivut">Verkkosivut</a></li>
+          <li><a href="#projektit">Projektit</a></li>
+          <li><a href="#opinnot">Opinnot</a></li>
+          <li><a href="#yhteystiedot">Yhteystiedot</a></li>
+        </ul>
+      </nav>
+    </header>
+    <p class="lang">
+      <span aria-current="true">FI</span>
+      <span aria-hidden="true">/</span>
+      <a href="en/" hreflang="en" lang="en" aria-label="Read in English">EN</a>
+    </p>
+
+    <main id="sisalto">
+      <div class="content">
+
+        <section class="intro" id="alku" aria-labelledby="nimi">
+          <h1 id="nimi">Alex Lundström</h1>
+          <p class="lede">
+            Olen neljännen vuoden tietotekniikan opiskelija Tampereen yliopistossa. Erikoistun erityisesti kyberturvallisuuden sekä tietoliikennetekniikan alaan, mutta olen opiskellut myös ohjelmistotekniikkaa. Olen tehnyt useita projekteja, joista osa on esitetty tämän alapuolella. Kirjoitan tällä hetkellä kandidaatintutkielmaa, joka käsittelee SSD-levyjen turvallista tiedonpoistoa.<a class="ref" id="viite-1" href="#huom-1" aria-describedby="huom-1">1</a> Tutkielma valmistuu tämän vuoden loppuun mennessä.<span class="note" id="huom-1" role="note"><span class="note-num">1</span>Tutkielmasta lisää kohdassa <a href="#kandidaatintyo">Kandidaatintyö</a>.</span>
+          </p>
+        </section>
+
+        <section class="section" id="kyberlaboratorio" aria-labelledby="kyberlaboratorio-otsikko">
+          <h2 id="kyberlaboratorio-otsikko">Homelab</h2>
+          <p class="section-lede">
+            Olen tehnyt homelabin, joka koostuu virtuaalikoneista. Projekti on tehty englannin kielellä. Skenaarioiden tarkoitus on oppia yleisimpiä hyökkäysmenetelmä, sekä oppia lukemaan muun muassa lokitiedoista hyökkäysten piirteitä.
+          </p>
+          <p>
+            Skenaariossa 01 SMB brute-force teen brute-force hyökkäyksen toiseen virtuaalikoneeseen, missä arvaan tilin heikon salasanan ja luen tililtä tiedoston. Skenaario on valmis, ja on saatavilla GitHubissa.
+          </p>
+          <p>
+            Skenaariossa 02 Persistence hyökkääjä asentaa virtuaalikoneeseen pysyvän pääsyn, joka säilyy uudelleenkäynnistymisen jälkeen. Skenaario on vielä kesken, ja julkaistaan myöhemmin.
+          </p>
+
+          <dl class="facts">
+            <dt>Laboratorio</dt>
+            <dd>Kali Linux ja Windows 11, VirtualBox</dd>
+            <dt>Lähdekoodi</dt>
+            <dd><a href="https://github.com/AlexLundstrom/cybersecurity-home-lab">cybersecurity-home-lab GitHubissa</a></dd>
+          </dl>
+
+          <h3>Mitä opin</h3>
+          <dl class="learned">
+            <dt>Homelabin rakentaminen</dt>
+            <dd>Rakensin laboratorion VirtualBoxilla kahdella eri käyttöjärjestelmällä eristettyyn verkkoon. Määritin verkon, käyttäjätilit, tiedostot ja tilannekuvat. Työskentelin sekä Linuxin että Windowsin komentorivillä.</dd>
+            <dt>Tunkeutumistestauksen ja red teamingin perusteet</dt>
+            <dd>Toteutin hyökkäyksen Kalista. Siinä skannasin kohteen Nmapilla, kartoitin SMB:n NetExecillä, murtauduin tiliin salasanalistalla ja luin tiedoston tililtä.</dd>
+            <dt>Valvonta ja lokien lukeminen</dt>
+            <dd>Luin Windowsin tietoturvalokeja ja opin tapahtumatunnukset ja kirjautumistyypit niin, että erotan hyökkäyksen normaalista toiminnasta. Wiresharkilla luin verkkoliikennettä ja löysin kirjautumisyritykset suodattimilla.</dd>
+            <dt>Ohjelmointi</dt>
+            <dd>Opin myös kirjoittamaan Pythonilla tunnistimen, joka löytää hyökkäysketjun tietoturvalokista.</dd>
+          </dl>
+
+          <h3>Miten laboratorio on rakennettu</h3>
+          <figure class="diagram">
+            <img src="assets/img/lab-network.png" width="1485" height="1115" loading="lazy" decoding="async" alt="Laboratorion verkko: isäntäkoneen VirtualBoxissa Kali Linux (hyökkääjä, 192.168.56.10) ja Windows 11 (kohde, 192.168.56.20) ovat host-only-verkossa 192.168.56.0/24. Vain Kalilla on yhteys internetiin.">
+          </figure>
+        </section>
+
+        <section class="section" id="verkkosivut" aria-labelledby="verkkosivut-otsikko">
+          <h2 id="verkkosivut-otsikko">Verkkosivut</h2>
+          <p class="section-lede">
+            Teen verkkosivuja yrityksille omalla toiminimelläni. Palvelun oma sivusto on <a href="https://alexlundstrom.fi">alexlundstrom.fi</a>.
+          </p>
+          <p>
+            Aloitin verkkosivujen rakentamisen harrastuksena, ja olen tehnyt niitä nyt yli neljä vuotta. Yliopisto-opinnot ovat syventäneet osaamistani ohjelmistokehityksestä.
+          </p>
+          <p>
+            Sivustolla on kaksi esimerkkisivua, parturille ja pizzerialle. Tein ne portfoliota varten, joten niiden yritykset ja sisältö ovat kuvitteellisia.
+          </p>
+        </section>
+
+        <section class="section" id="projektit" aria-labelledby="projektit-otsikko">
+          <h2 id="projektit-otsikko">Projektit</h2>
+
+          <h3>EMI Node Editor</h3>
+          <p>
+            Teimme keväällä 2026 <span lang="en">Software Engineering Project 1</span> -kurssilla seitsemän opiskelijan ryhmässä visuaalisen ohjelmointityökalun. Toteutin työkaluun tiedostojärjestelmän ja kirjoitin projektin dokumentaatiota. Olin myös mukana toteuttamassa solmujen toiminnallisuutta.
+          </p>
+          <dl class="facts">
+            <dt>Kurssi</dt>
+            <dd><span lang="en">Software Engineering Project 1</span>, kevät 2026</dd>
+            <dt>Ryhmä</dt>
+            <dd>7 opiskelijaa</dd>
+            <dt>Kieli</dt>
+            <dd>C++</dd>
+            <dt>Lähdekoodi</dt>
+            <dd><a href="https://github.com/cuernatra/EMI-Node-Editor">EMI-Node-Editor GitHubissa</a></dd>
+          </dl>
+          <figure class="media">
+            <img src="assets/img/emi-node-editor.png" width="1279" height="748" loading="lazy" decoding="async" alt="EMI-editori: vasemmalla solmupaletti, keskellä solmuista ja niiden välisistä yhteyksistä koottu ohjelma ja alhaalla konsoli.">
+          </figure>
+
+          <h3>Elokuvasuosittelija</h3>
+          <p>
+            Elokuvasuosittelija ehdottaa elokuvia käyttäjän aiempien valintojen perusteella. Tein frontendin Reactilla ja backendin Flaskilla.
+          </p>
+          <p>
+            Tein full stack -sovelluksen alusta alkaen. Syvensin ymmärrystäni siitä, miten dataa haetaan tietokannasta, miten algoritmi laskee suositukset annetusta datasta ja miten tulokset reititetään frontendiin.
+          </p>
+          <dl class="facts">
+            <dt>Frontend</dt>
+            <dd>React</dd>
+            <dt>Backend</dt>
+            <dd>Flask</dd>
+            <dt>Lähdekoodi</dt>
+            <dd><a href="https://github.com/AlexLundstrom/movie-recommender">movie-recommender GitHubissa</a></dd>
+          </dl>
+          <figure class="media">
+            <video controls preload="none" playsinline width="1840" height="932" poster="assets/img/movie-recommender-poster.png" aria-label="Video elokuvasuosittelijan käytöstä">
+              <source src="assets/video/movie-recommender.mp4" type="video/mp4">
+              <a href="assets/video/movie-recommender.mp4">Lataa video elokuvasuosittelijasta</a>
+            </video>
+          </figure>
+        </section>
+
+        <section class="section" id="opinnot" aria-labelledby="opinnot-otsikko">
+          <h2 id="opinnot-otsikko">Opinnot</h2>
+          <dl class="facts">
+            <dt>Yliopisto</dt>
+            <dd>Tampereen yliopisto</dd>
+            <dt>Ala</dt>
+            <dd>Tietotekniikka, 4. vuosi</dd>
+            <dt>Erikoistuminen</dt>
+            <dd>Kyberturvallisuus</dd>
+          </dl>
+
+          <h3 id="kandidaatintyo">Kandidaatintyö</h3>
+          <p>
+            Työni käsittelee SSD-levyjen turvallista tiedonpoistoa. Työ on tekeillä.
+          </p>
+
+          <h3>Keskeiset kurssit</h3>
+          <p>
+            Olennaiset kurssit, joista olen oppinut eniten.  
+          </p>
+          <dl class="courses">
+            <dt>Kyberturvallisuus</dt>
+            <dd>
+              <ul>
+                <li lang="en">Security Protocols</li>
+                <li lang="en">Cryptography Engineering</li>
+                <li>Kyberturvallisuus 1: perusteet</li>
+              </ul>
+            </dd>
+            <dt>Tietoliikennetekniikka</dt>
+            <dd>
+              <ul>
+                <li>Tietoverkkotekniikat I ja II</li>
+                <li>Tietoverkkojen laboratoriotyöt I</li>
+                <li>Langattoman tietoliikenteen perusteet</li>
+              </ul>
+            </dd>
+            <dt>Ohjelmistotekniikka</dt>
+            <dd>
+              <ul>
+                <li>Ohjelmointi 1, 2 ja 3</li>
+                <li>Tietorakenteet ja algoritmit 1</li>
+                <li>Tietokantojen perusteet</li>
+                <li lang="en">Software Engineering Project 1</li>
+                <li>Tekoälyn perusteet</li>
+              </ul>
+            </dd>
+          </dl>
+        </section>
+
+        <section class="section" id="yhteystiedot" aria-labelledby="yhteystiedot-otsikko">
+          <h2 id="yhteystiedot-otsikko">Yhteystiedot</h2>
+          <p>Tavoitat minut parhaiten sähköpostilla tai LinkedInissä.</p>
+          <ul class="contact-list">
+            <li><span>Sähköposti</span> <a href="mailto:alexlundstrom42@gmail.com">alexlundstrom42@gmail.com</a></li>
+            <li><span>LinkedIn</span> <a href="https://www.linkedin.com/in/alex-lundstrom/">LinkedIn-profiili</a></li>
+            <li><span>GitHub</span> <a href="https://github.com/AlexLundstrom">github.com/AlexLundstrom</a></li>
+            <li><span>CV</span> <span><a href="assets/cv/alex-lundstrom-cv-fi.pdf" download="Alex_Lundstrom_CV.pdf">Lataa CV</a> <span class="file-meta">PDF, 560 kt</span></span></li>
+          </ul>
+        </section>
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 Alex Lundström. <a href="en/" hreflang="en" lang="en">Read in English</a></p>
+    </footer>
+  </div>
+</body>
+</html>
