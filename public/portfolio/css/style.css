@@ -296,6 +296,16 @@ a:hover {
   padding-block: var(--s-5) var(--s-4);
 }
 
+/* Portrait: small above the name on phones and tablets, in the notes margin from 64rem. */
+.portrait {
+  display: block;
+  width: 7rem;
+  height: auto;
+  margin-bottom: var(--s-4);
+  border: 1px solid var(--rule);
+  background: var(--plate, #fff);
+}
+
 .intro h1 {
   font-size: var(--t-display);
   font-variation-settings: "opsz" 60;
@@ -648,6 +658,13 @@ a:hover {
     padding: var(--s-1) var(--s-2);
   }
 
+  /* Hangs in the margin like a side note, left-aligned with the notes column. */
+  .portrait {
+    float: right;
+    width: 12rem;
+    margin: 0.4rem calc(-1 * (12rem + var(--note-gap))) var(--s-4) 0;
+  }
+
   .site-header,
   .site-footer {
     max-width: calc(var(--measure) + var(--note-gap) + var(--note-w));
@@ -723,6 +740,11 @@ a:hover {
 
   .intro {
     padding-top: var(--s-6);
+  }
+
+  /* Start below the FI / EN switch, which sits at the top of the same column. */
+  .portrait {
+    margin-top: 3.5rem;
   }
 }
 
